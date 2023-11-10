@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listunsplashptrhfmRowModel" type="com.munirasapplication.app.modules.doctorsprofile.data.model.ListunsplashptrhfmRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearDoctordetails"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal" style="@style/groupStylebluegray_50_1">
+        <ImageView android:id="@+id/imageUnsplashpTrhfm"
+            android:layout_height="@dimen/_56pxh"
+            android:layout_marginBottom="@dimen/_3pxv"
+            android:layout_marginStart="@dimen/_32pxh"
+            android:layout_marginTop="@dimen/_7pxv"
+            android:layout_width="@dimen/_60pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_20pxh}"
+            imageRes="@{@drawable/img_unsplashptrhfm_56x60}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_unsplashptrhfm_56x60"/>
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearColumnfrancissktelz"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10pxv"
+            android:layout_marginStart="@dimen/_19pxh"
+            android:layout_marginTop="@dimen/_21pxv"
+            android:layout_weight="0.51" android:layout_width="0dp" android:orientation="vertical">
+            <TextView android:ellipsize="end" android:gravity="start"
+                android:id="@+id/txtFrancisSktelz"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{listunsplashptrhfmRowModel.txtFrancisSktelz}"
+                style="@style/txtPoppinssemibold12_1" tools:text="@string/lbl_mary_nena"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtTimeOne"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_12pxh"
+                android:layout_marginStart="@dimen/_12pxh"
+                android:layout_marginTop="@dimen/_1pxv"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{listunsplashptrhfmRowModel.txtTimeOne}"
+                style="@style/txtPoppinssemibold11" tools:text="@string/lbl_8_10am"/>
+        </LinearLayout>
+        <ImageView android:id="@+id/imageSearch"
+            android:layout_height="@dimen/_20pxh"
+            android:layout_marginBottom="@dimen/_23pxv"
+            android:layout_marginEnd="@dimen/_21pxh"
+            android:layout_marginStart="@dimen/_19pxh"
+            android:layout_marginTop="@dimen/_24pxv"
+            android:layout_width="@dimen/_25pxh"
+            android:scaleType="fitXY" android:src="@drawable/img_search"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_search"/>
+    </LinearLayout>
+</layout>

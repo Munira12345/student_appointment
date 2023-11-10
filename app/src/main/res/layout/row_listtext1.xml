@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listtext1RowModel" type="com.munirasapplication.app.modules.doctorscalendar.data.model.Listtext1RowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearLine"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearCalendar2030"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_3pxv"
+            android:layout_marginStart="@dimen/_4pxh"
+            android:layout_marginTop="@dimen/_4pxv"
+            android:layout_weight="0.12" android:layout_width="0dp"
+            android:orientation="vertical" style="@style/groupStylecornerRadius">
+            <TextView android:ellipsize="end" android:gravity="start"
+                android:id="@+id/txtText"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{listtext1RowModel.txtText}"
+                style="@style/txtInterextralight11" tools:text="@string/lbl_06"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearCalendar2031"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_3pxv"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_4pxv"
+            android:layout_weight="0.15" android:layout_width="0dp"
+            android:orientation="vertical" style="@style/groupStylecornerRadius">
+            <TextView android:ellipsize="end" android:gravity="start"
+                android:id="@+id/txtTextOne"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{listtext1RowModel.txtTextOne}"
+                style="@style/txtInterregular11" tools:text="@string/lbl_mo"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearCalendar2023"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_3pxv"
+            android:layout_marginStart="@dimen/_17pxh"
+            android:layout_marginTop="@dimen/_4pxv"
+            android:layout_weight="0.11" android:layout_width="0dp"
+            android:orientation="vertical" style="@style/groupStylecornerRadius">
+            <TextView android:ellipsize="end" android:gravity="start"
+                android:id="@+id/txtTextTwo"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{listtext1RowModel.txtTextTwo}"
+                style="@style/txtInterregular11" tools:text="@string/lbl_tu"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearCalendar2024"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_3pxv"
+            android:layout_marginStart="@dimen/_17pxh"
+            android:layout_marginTop="@dimen/_4pxv"
+            android:layout_weight="0.15" android:layout_width="0dp"
+            android:orientation="vertical" style="@style/groupStylecornerRadius">
+            <TextView android:ellipsize="end" android:gravity="start"
+                android:id="@+id/txtTextThree"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{listtext1RowModel.txtTextThree}"
+                style="@style/txtInterregular11" tools:text="@string/lbl_we"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearCalendar2025"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_3pxv"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_4pxv"
+            android:layout_weight="0.12" android:layout_width="0dp"
+            android:orientation="vertical" style="@style/groupStylecornerRadius">
+            <TextView android:ellipsize="end" android:gravity="start"
+                android:id="@+id/txtTextFour"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{listtext1RowModel.txtTextFour}"
+                style="@style/txtInterregular11" tools:text="@string/lbl_th"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearCalendar2026"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_3pxv"
+            android:layout_marginStart="@dimen/_19pxh"
+            android:layout_marginTop="@dimen/_4pxv"
+            android:layout_weight="0.1" android:layout_width="0dp"
+            android:orientation="vertical" style="@style/groupStylecornerRadius">
+            <TextView android:ellipsize="end" android:gravity="start"
+                android:id="@+id/txtTextFive"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{listtext1RowModel.txtTextFive}"
+                style="@style/txtInterregular11" tools:text="@string/lbl_fr"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearCalendar2027"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_3pxv"
+            android:layout_marginStart="@dimen/_19pxh"
+            android:layout_marginTop="@dimen/_4pxv"
+            android:layout_weight="0.12" android:layout_width="0dp"
+            android:orientation="vertical" style="@style/groupStylecornerRadius">
+            <TextView android:ellipsize="end" android:gravity="start"
+                android:id="@+id/txtTextSix"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{listtext1RowModel.txtTextSix}"
+                style="@style/txtInterregular11_1" tools:text="@string/lbl_sa"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearCalendar2028"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_3pxv"
+            android:layout_marginEnd="@dimen/_4pxh"
+            android:layout_marginStart="@dimen/_18pxh"
+            android:layout_marginTop="@dimen/_4pxv"
+            android:layout_weight="0.12" android:layout_width="0dp"
+            android:orientation="vertical" style="@style/groupStylecornerRadius">
+            <TextView android:ellipsize="end" android:gravity="start"
+                android:id="@+id/txtTextSeven"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{listtext1RowModel.txtTextSeven}"
+                style="@style/txtInterregular11_1" tools:text="@string/lbl_su"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

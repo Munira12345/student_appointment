@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="bookingVM" type="com.munirasapplication.app.modules.booking.data.viewmodel.BookingVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearBooking"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_17pxv"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylegray_50">
+        <LinearLayout android:id="@+id/linearColumnplus"
+            android:layout_height="0dp" android:layout_weight="1.0"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <LinearLayout android:id="@+id/linearColumntime"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical" style="@style/groupStyleindigo_A100">
+                <FrameLayout android:id="@+id/frameStacktime"
+                    android:layout_gravity="start"
+                    android:layout_height="@dimen/_187pxv"
+                    android:layout_marginEnd="@dimen/_10pxh" android:layout_width="@dimen/_340pxh">
+
+                    <ImageView android:id="@+id/imageEllipseOne"
+                        android:layout_gravity="start"
+                        android:layout_height="@dimen/_187pxh"
+                        android:layout_marginEnd="@dimen/_10pxh"
+                        android:layout_width="@dimen/_137pxh"
+                        android:scaleType="fitXY"
+                        imageRes="@{@drawable/img_ellipse1_3}"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse1_3"/>
+                </FrameLayout>
+                <TextView android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtBookyourconve"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_20pxv"
+                    android:layout_marginEnd="@dimen/_54pxh"
+                    android:layout_marginStart="@dimen/_55pxh"
+                    android:layout_marginTop="@dimen/_68pxv"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{bookingVM.bookingModel.txtBookyourconve}"
+                    style="@style/txtPoppinssemibold16" tools:text="choose time"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearColumnavailabletime"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_22pxh"
+                android:layout_marginStart="@dimen/_34pxh"
+                android:layout_marginTop="@dimen/_18pxv"
+                android:layout_width="match_parent"
+                android:orientation="vertical" style="@style/groupStylegray_300cornerRadius">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtAvailabletime"
+                    android:layout_gravity="start"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_32pxh"
+                    android:layout_marginStart="@dimen/_32pxh"
+                    android:layout_marginTop="@dimen/_19pxv"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{bookingVM.bookingModel.txtAvailabletime}"
+                    style="@style/txtPoppinsregular13" tools:text="@string/msg_available_time"/>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearRow800Am"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_23pxh"
+                    android:layout_marginStart="@dimen/_23pxh"
+                    android:layout_marginTop="@dimen/_26pxv"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:ellipsize="end" android:gravity="center"
+                        android:id="@+id/btn800Am"
+                        android:layout_height="@dimen/_38pxv"
+                        android:layout_width="@dimen/_95pxh"
+                        android:lineSpacingExtra="@dimen/_7pxh"
+                        android:paddingBottom="@dimen/_9pxv"
+                        android:paddingEnd="@dimen/_26pxh"
+                        android:paddingStart="@dimen/_18pxh"
+                        android:paddingTop="@dimen/_9pxv"
+                        android:singleLine="true"
+                        android:text="@string/lbl_8_00_am"
+                        android:textAllCaps="false"
+                        style="@style/btnSolidRounded" tools:text="@string/lbl_8_00_am"/>
+                    <FrameLayout android:id="@+id/frameStacktimeOne"
+                        android:layout_height="@dimen/_38pxv"
+                        android:layout_marginStart="@dimen/_52pxh" android:layout_width="@dimen/_95pxh">
+                        <TextView android:ellipsize="end"
+                            android:gravity="top|start"
+                            android:id="@+id/txtTimeOne"
+                            android:layout_gravity="center"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_9pxv"
+                            android:layout_marginEnd="@dimen/_21pxh"
+                            android:layout_marginStart="@dimen/_23pxh"
+                            android:layout_marginTop="@dimen/_8pxv"
+                            android:layout_width="match_parent"
+                            android:lineSpacingExtra="@dimen/_7pxh"
+                            android:singleLine="true"
+                            android:text="@{bookingVM.bookingModel.txtTimeOne}"
+                            style="@style/txtPoppinsregular13_1" tools:text="@string/lbl_9_00_am"/>
+                        <View
+                            android:background="@drawable/rectangle_bg_white_a700_a5_radius_10"
+                            android:id="@+id/viewRectangleThirteen"
+                            android:layout_gravity="start"
+                            android:layout_height="@dimen/_38pxv" android:layout_width="@dimen/_95pxh"/>
+                    </FrameLayout>
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:gravity="start"
+                    android:id="@+id/recyclerBooking"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_52pxv"
+                    android:layout_marginEnd="@dimen/_25pxh"
+                    android:layout_marginStart="@dimen/_25pxh"
+                    android:layout_marginTop="@dimen/_33pxv"
+                    android:layout_width="match_parent"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="2" itemSpace="@{@dimen/_50pxh}"
+                    tools:itemCount="6" tools:listitem="@layout/row_booking"/>
+            </LinearLayout>
+            <ImageView android:id="@+id/imagePlus"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_21pxh"
+                android:layout_marginEnd="@dimen/_34pxh"
+                android:layout_marginStart="@dimen/_34pxh"
+                android:layout_marginTop="@dimen/_18pxv"
+                android:layout_width="@dimen/_21pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_plus"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_plus"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

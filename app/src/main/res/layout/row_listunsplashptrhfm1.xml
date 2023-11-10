@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listunsplashptrhfm1RowModel" type="com.munirasapplication.app.modules.patientrequests.data.model.Listunsplashptrhfm1RowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearRowunsplashptrhfm"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <LinearLayout android:id="@+id/linearDoctordetails"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.93" android:layout_width="0dp"
+            android:orientation="horizontal" style="@style/groupStylebluegray_50_1">
+            <ImageView android:id="@+id/imageUnsplashpTrhfm"
+                android:layout_height="@dimen/_56pxh"
+                android:layout_marginBottom="@dimen/_3pxv"
+                android:layout_marginStart="@dimen/_32pxh"
+                android:layout_marginTop="@dimen/_7pxv"
+                android:layout_width="@dimen/_60pxh"
+                android:scaleType="fitXY"
+                cornerRadius="@{@dimen/_20pxh}"
+                imageRes="@{@drawable/img_unsplashptrhfm_3}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_unsplashptrhfm_3"/>
+            <LinearLayout android:id="@+id/linearColumnlanguage"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10pxv"
+                android:layout_marginStart="@dimen/_22pxh"
+                android:layout_marginTop="@dimen/_19pxv"
+                android:layout_weight="0.52" android:layout_width="0dp" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:gravity="start"
+                    android:id="@+id/txtLanguageOne"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{listunsplashptrhfm1RowModel.txtLanguageOne}"
+                    style="@style/txtPoppinssemibold12_1" tools:text="@string/lbl_marc_mbesu"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTimeOne"
+                    android:layout_gravity="start"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_marginStart="@dimen/_9pxh"
+                    android:layout_marginTop="@dimen/_2pxv"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{listunsplashptrhfm1RowModel.txtTimeOne}"
+                    style="@style/txtPoppinssemibold11" tools:text="@string/lbl_9_00am2"/>
+            </LinearLayout>
+            <ImageView android:id="@+id/imageCheckmark"
+                android:layout_height="@dimen/_20pxh"
+                android:layout_marginBottom="@dimen/_22pxv"
+                android:layout_marginEnd="@dimen/_22pxh"
+                android:layout_marginStart="@dimen/_22pxh"
+                android:layout_marginTop="@dimen/_25pxv"
+                android:layout_width="@dimen/_20pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_checkmark"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_checkmark"/>
+        </LinearLayout>
+        <ImageView android:id="@+id/imageClose"
+            android:layout_height="@dimen/_20pxh"
+            android:layout_marginBottom="@dimen/_23pxv"
+            android:layout_marginStart="@dimen/_17pxh"
+            android:layout_marginTop="@dimen/_24pxv"
+            android:layout_width="@dimen/_20pxh"
+            android:scaleType="fitXY" android:src="@drawable/img_close"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_close"/>
+    </LinearLayout>
+</layout>

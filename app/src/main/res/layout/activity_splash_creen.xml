@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="splashCreenVM" type="com.munirasapplication.app.modules.splashcreen.data.viewmodel.SplashCreenVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearSplashcreen"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylegray_50">
+        <FrameLayout android:id="@+id/frameStacktime"
+            android:layout_gravity="start"
+            android:layout_height="@dimen/_187pxv"
+            android:layout_marginEnd="@dimen/_10pxh" android:layout_width="@dimen/_333pxh">
+
+            <ImageView android:id="@+id/imageEllipseOne"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_187pxh"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_width="@dimen/_137pxh"
+                android:scaleType="fitXY"
+                imageRes="@{@drawable/img_ellipse1_1}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse1_1"/>
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/imageUndrawdoctors"
+            android:layout_width="347dp"
+            android:layout_height="358dp"
+            android:layout_gravity="end"
+            android:layout_marginStart="200.0dp"
+            android:layout_marginTop="@dimen/_74pxv"
+            android:layout_marginEnd="150.0dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_undrawwelldon"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/img_undrawwelldon" />
+
+        <TextView android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtLanguage"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_12pxh"
+            android:layout_marginStart="@dimen/_12pxh"
+            android:layout_marginTop="@dimen/_15pxv"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{splashCreenVM.splashCreenModel.txtLanguage}"
+            style="@style/txtPoppinssemibold18" tools:text="@string/msg_all_your_medica"/>
+        <TextView android:gravity="center_horizontal"
+            android:id="@+id/txtDescription"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_12pxh"
+            android:layout_marginStart="@dimen/_12pxh"
+            android:layout_marginTop="@dimen/_15pxv"
+            android:layout_width="match_parent"
+            android:lineSpacingExtra="@dimen/_10pxh"
+            android:text="@{splashCreenVM.splashCreenModel.txtDescription}"
+            style="@style/txtPoppinsregular13_1" tools:text="Click get started to start your journey with us"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnGetStartedOne"
+            style="@style/btnSolid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12pxh"
+            android:layout_marginTop="@dimen/_155pxv"
+            android:layout_marginEnd="@dimen/_12pxh"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/_9pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_16pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingBottom="@dimen/_16pxv"
+            android:singleLine="true"
+            android:text="@string/lbl_get_started"
+            android:textAllCaps="false"
+            tools:text="@string/lbl_get_started" />
+    </LinearLayout>
+</layout>
