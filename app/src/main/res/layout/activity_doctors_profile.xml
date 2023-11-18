@@ -44,29 +44,30 @@
                         imageRes="@{@drawable/img_ellipse1_7}"
                         tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse1_7"/>
                 </FrameLayout>
-                <TextView android:ellipsize="end"
-                    android:gravity="center_horizontal"
+
+                <TextView
                     android:id="@+id/txtGoodmorningFra"
+                    style="@style/txtPoppinssemibold18_1"
+                    android:layout_width="279dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/_10pxv"
-                    android:layout_marginEnd="@dimen/_77pxh"
                     android:layout_marginStart="@dimen/_78pxh"
                     android:layout_marginTop="@dimen/_18pxv"
-                    android:layout_width="match_parent"
+                    android:layout_marginEnd="@dimen/_77pxh"
+                    android:layout_marginBottom="@dimen/_10pxv"
+                    android:ellipsize="end"
+                    android:gravity="center_horizontal"
                     android:singleLine="true"
                     android:text="@{doctorsProfileVM.doctorsProfileModel.txtGoodmorningFra}"
-                    style="@style/txtPoppinssemibold18_1" tools:text="@string/msg_goodmorning_fra"/>
+                    tools:text="@string/msg_goodmorning_fra" />
             </LinearLayout>
-            <TextView android:ellipsize="end" android:gravity="start"
-                android:id="@+id/txtLanguage"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/_40pxh"
-                android:layout_marginStart="@dimen/_40pxh"
-                android:layout_marginTop="@dimen/_17pxv"
+
+            <Button
+                android:id="@+id/button2"
                 android:layout_width="match_parent"
-                android:singleLine="true"
-                android:text="@{doctorsProfileVM.doctorsProfileModel.txtLanguage}"
-                style="@style/txtPoppinssemibold12" tools:text="@string/msg_you_have_one_3"/>
+                android:layout_height="wrap_content"
+                android:text="View Requests"
+                style="@style/txtPoppinssemibold12" tools:text=" view requests "/>/>
+
             <TextView android:ellipsize="end"
                 android:id="@+id/txtNextAppointmen"
                 android:layout_gravity="start"
@@ -89,6 +90,7 @@
                 android:orientation="vertical"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 itemSpace="@{@dimen/_17pxh}" tools:itemCount="4" tools:listitem="@layout/row_listunsplashptrhfm"/>
+
         </LinearLayout>
         <FrameLayout android:gravity="center_horizontal"
             android:id="@+id/frameBottombar"

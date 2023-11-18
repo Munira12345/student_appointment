@@ -8,83 +8,95 @@
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:orientation="vertical" style="@style/groupStylegray_50">
-        <FrameLayout android:id="@+id/frameStacktime"
-            android:layout_gravity="start"
-            android:layout_height="@dimen/_213pxv"
-            android:layout_marginEnd="@dimen/_27pxh" android:layout_width="@dimen/_332pxh">
 
-            <ImageView android:id="@+id/imageEllipseOne"
-                android:layout_gravity="top|start"
-                android:layout_height="@dimen/_187pxh"
-                android:layout_marginBottom="@dimen/_10pxv"
-                android:layout_marginEnd="@dimen/_10pxh"
-                android:layout_width="@dimen/_137pxh"
-                android:scaleType="fitXY"
+        <FrameLayout
+            android:id="@+id/frameStacktime"
+            android:layout_width="match_parent"
+            android:layout_height="126dp"
+            android:layout_gravity="start"
+            android:layout_marginEnd="@dimen/_27pxh">
+
+            <ImageView
+                android:id="@+id/imageEllipseOne"
                 imageRes="@{@drawable/img_ellipse1_187x137}"
-                tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse1_187x137"/>
-            <TextView android:ellipsize="end"
+                android:layout_width="@dimen/_137pxh"
+                android:layout_height="@dimen/_187pxh"
+                android:layout_gravity="top|start"
+                android:layout_marginEnd="10.dp"
+                android:layout_marginBottom="@dimen/_10pxv"
+                android:scaleType="fitXY"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/img_ellipse1_187x137" />
+
+            <TextView
                 android:id="@+id/txtWelcomeBack"
-                android:layout_gravity="bottom|end"
+                style="@style/txtPoppinssemibold18"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/_72pxh"
+                android:layout_gravity="bottom|end"
                 android:layout_marginStart="@dimen/_72pxh"
                 android:layout_marginTop="@dimen/_10pxv"
-                android:layout_width="wrap_content"
+                android:layout_marginEnd="@dimen/_72pxh"
+                android:ellipsize="end"
                 android:singleLine="true"
                 android:text="@{loginVM.loginModel.txtWelcomeBack}"
-                style="@style/txtPoppinssemibold18" tools:text="@string/lbl_welcome_back"/>
+                tools:text="@string/lbl_welcome_back" />
         </FrameLayout>
         <ImageView android:id="@+id/imageUndrawwelldon"
             android:layout_height="@dimen/_157pxh"
             android:layout_marginEnd="@dimen/_83pxh"
             android:layout_marginStart="@dimen/_83pxh"
-            android:layout_marginTop="@dimen/_72pxv"
+            android:layout_marginTop="90.1dp"
             android:layout_width="@dimen/_176pxh"
             android:scaleType="fitXY"
             android:src="@drawable/img_undrawwelldon"
             tools:ignore="ContentDescription" tools:src="@drawable/img_undrawwelldon"/>
-        <androidx.appcompat.widget.AppCompatButton
-            android:ellipsize="end" android:gravity="center"
-            android:id="@+id/btnEnterYourEmailOne"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/_23pxh"
-            android:layout_marginStart="@dimen/_23pxh"
-            android:layout_marginTop="@dimen/_54pxv"
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailLayout"
+            style="@style/RegistrationTextInputOuterFieldStyle"
             android:layout_width="match_parent"
-            android:lineSpacingExtra="@dimen/_7pxh"
-            android:paddingBottom="@dimen/_16pxv"
-            android:paddingEnd="@dimen/_30pxh"
-            android:paddingStart="@dimen/_30pxh"
-            android:paddingTop="@dimen/_16pxv" android:singleLine="true"
-            android:text="@string/msg_enter_your_emai"
-            android:textAllCaps="false" style="@style/btnSolidRounded_1" tools:text="@string/msg_enter_your_emai"/>
-        <androidx.appcompat.widget.AppCompatButton
-            android:ellipsize="end" android:gravity="center"
-            android:id="@+id/btnEnterPassword"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/_23pxh"
-            android:layout_marginStart="@dimen/_23pxh"
-            android:layout_marginTop="@dimen/_18pxv"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/btnEnterYourEmailOne"
+                style="@style/RegistrationTextInputInnerFieldStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7.0dp"
+                android:hint="Type your Email"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordLayout"
+            style="@style/RegistrationTextInputOuterFieldStyle"
             android:layout_width="match_parent"
-            android:lineSpacingExtra="@dimen/_7pxh"
-            android:paddingBottom="@dimen/_16pxv"
-            android:paddingEnd="@dimen/_30pxh"
-            android:paddingStart="@dimen/_30pxh"
-            android:paddingTop="@dimen/_16pxv" android:singleLine="true"
-            android:text="@string/lbl_enter_password"
-            android:textAllCaps="false" style="@style/btnSolidRounded_1" tools:text="@string/lbl_enter_password"/>
-        <TextView android:ellipsize="end"
-            android:id="@+id/txtForgotpassword"
-            android:layout_gravity="start"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/_134pxh"
-            android:layout_marginStart="@dimen/_117pxh"
-            android:layout_marginTop="@dimen/_36pxv"
-            android:layout_width="wrap_content"
-            android:lineSpacingExtra="@dimen/_7pxh"
-            android:singleLine="true"
-            android:text="@{loginVM.loginModel.txtForgotpassword}"
-            style="@style/txtPoppinssemibold13" tools:text="@string/lbl_forgot_password"/>
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/emailLayout"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passET"
+                style="@style/RegistrationTextInputInnerFieldStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Type Your Password"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
         <androidx.appcompat.widget.AppCompatButton
             android:ellipsize="end" android:gravity="center"
             android:id="@+id/btnRegisterOne"
@@ -98,8 +110,8 @@
             android:paddingEnd="@dimen/_30pxh"
             android:paddingStart="@dimen/_30pxh"
             android:paddingTop="@dimen/_16pxv" android:singleLine="true"
-            android:text="@string/lbl_register"
-            android:textAllCaps="false" style="@style/btnSolid" tools:text="@string/lbl_register"/>
+            android:text="login"
+            android:textAllCaps="false" style="@style/btnSolid" tools:text="login"/>
         <TextView android:ellipsize="end" android:gravity="start"
             android:id="@+id/txtConfirmation"
             android:layout_height="wrap_content"

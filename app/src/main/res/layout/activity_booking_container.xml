@@ -11,7 +11,14 @@
         android:orientation="vertical" style="@style/groupStylegray_50">
         <FrameLayout android:id="@+id/fragmentContainer"
             android:layout_height="match_parent"
-            android:layout_weight="1" android:layout_width="match_parent"/>
+            android:layout_weight="1" android:layout_width="match_parent">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="531dp"
+                android:text="Meeting booked successfully" />
+        </FrameLayout>
         <FrameLayout android:gravity="center_horizontal"
             android:id="@+id/frameBottombar"
             android:layout_height="wrap_content"

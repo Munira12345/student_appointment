@@ -2,15 +2,19 @@ package com.munirasapplication.app.modules.booking.ui
 
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
 import androidx.fragment.app.viewModels
 import com.munirasapplication.app.R
 import com.munirasapplication.app.appcomponents.base.BaseFragment
 import com.munirasapplication.app.databinding.FragmentBookingBinding
 import com.munirasapplication.app.modules.booking.`data`.model.BookingRowModel
 import com.munirasapplication.app.modules.booking.`data`.viewmodel.BookingVM
+import com.munirasapplication.app.modules.bookingcontainer.ui.BookingContainerActivity
+import com.munirasapplication.app.modules.login.ui.LoginActivity
 import kotlin.Int
 import kotlin.String
 import kotlin.Unit
+import android.content.Intent
 
 class BookingFragment : BaseFragment<FragmentBookingBinding>(R.layout.fragment_booking) {
   private val viewModel: BookingVM by viewModels<BookingVM>()
@@ -33,6 +37,13 @@ class BookingFragment : BaseFragment<FragmentBookingBinding>(R.layout.fragment_b
   }
 
   override fun setUpClicks(): Unit {
+//added code
+    val viewRectangleThirteen = binding.root.findViewById<View>(R.id.viewRectangleThirteen)
+    viewRectangleThirteen.setOnClickListener {
+      // handle the text view click and navigate to saved
+      val intent = Intent(this, BookingContainerActivity::class.java)
+      startActivity(intent)
+    }
   }
 
   fun onClickRecyclerBooking(

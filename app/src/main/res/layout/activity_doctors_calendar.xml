@@ -32,18 +32,21 @@
                         imageRes="@{@drawable/img_ellipse1_9}"
                         tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse1_9"/>
                 </FrameLayout>
-                <TextView android:ellipsize="end"
+
+                <TextView
                     android:id="@+id/txtMyCalendar"
-                    android:layout_gravity="center_horizontal"
+                    style="@style/txtPoppinssemibold18_1"
+                    android:layout_width="291dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/_83pxv"
-                    android:layout_marginEnd="@dimen/_121pxh"
+                    android:layout_gravity="center_horizontal"
                     android:layout_marginStart="@dimen/_121pxh"
                     android:layout_marginTop="@dimen/_2pxv"
-                    android:layout_width="wrap_content"
+                    android:layout_marginEnd="@dimen/_121pxh"
+                    android:layout_marginBottom="@dimen/_83pxv"
+                    android:ellipsize="end"
                     android:singleLine="true"
                     android:text="@{doctorsCalendarVM.doctorsCalendarModel.txtMyCalendar}"
-                    style="@style/txtPoppinssemibold18_1" tools:text="@string/lbl_my_calendar"/>
+                    tools:text="@string/lbl_my_calendar" />
             </LinearLayout>
             <LinearLayout android:gravity="start"
                 android:id="@+id/linearDoctordetails"

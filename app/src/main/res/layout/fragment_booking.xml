@@ -31,18 +31,21 @@
                         imageRes="@{@drawable/img_ellipse1_3}"
                         tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse1_3"/>
                 </FrameLayout>
-                <TextView android:ellipsize="end"
-                    android:gravity="center_horizontal"
+
+                <TextView
                     android:id="@+id/txtBookyourconve"
+                    style="@style/txtPoppinssemibold16"
+                    android:layout_width="307dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/_20pxv"
-                    android:layout_marginEnd="@dimen/_54pxh"
                     android:layout_marginStart="@dimen/_55pxh"
                     android:layout_marginTop="@dimen/_68pxv"
-                    android:layout_width="match_parent"
+                    android:layout_marginEnd="@dimen/_54pxh"
+                    android:layout_marginBottom="@dimen/_20pxv"
+                    android:ellipsize="end"
+                    android:gravity="center_horizontal"
                     android:singleLine="true"
                     android:text="@{bookingVM.bookingModel.txtBookyourconve}"
-                    style="@style/txtPoppinssemibold16" tools:text="choose time"/>
+                    tools:text="Book Appointment" />
             </LinearLayout>
             <LinearLayout android:id="@+id/linearColumnavailabletime"
                 android:layout_height="wrap_content"
