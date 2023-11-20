@@ -1,5 +1,6 @@
 package com.munirasapplication.app.modules.booking.ui
 
+import android.content.Context
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
@@ -15,6 +16,7 @@ import kotlin.Int
 import kotlin.String
 import kotlin.Unit
 import android.content.Intent
+import com.munirasapplication.app.modules.dashboard.ui.DashboardActivity
 
 class BookingFragment : BaseFragment<FragmentBookingBinding>(R.layout.fragment_booking) {
   private val viewModel: BookingVM by viewModels<BookingVM>()
@@ -44,6 +46,25 @@ class BookingFragment : BaseFragment<FragmentBookingBinding>(R.layout.fragment_b
       val intent = Intent(this, BookingContainerActivity::class.java)
       startActivity(intent)
     }
+    val btn800Am = binding.root.findViewById<View>(R.id.btn800Am)
+    btn800Am.setOnClickListener {
+      // handle the text view click and navigate to saved
+      val intent = Intent(this, BookingContainerActivity::class.java)
+      startActivity(intent)
+    }
+    val recyclerBooking = binding.root.findViewById<View>(R.id.recyclerBooking)
+    recyclerBooking.setOnClickListener {
+      // handle the text view click and navigate to saved
+      val intent = Intent(this, BookingContainerActivity::class.java)
+      startActivity(intent)
+    }
+
+    val imagePlus = binding.root.findViewById<View>(R.id.imagePlus)
+    imagePlus.setOnClickListener {
+      // handle the text view click and navigate to saved
+      val intent = Intent(this, BookingContainerActivity::class.java)
+      startActivity(intent)
+    }
   }
 
   fun onClickRecyclerBooking(
@@ -63,6 +84,11 @@ class BookingFragment : BaseFragment<FragmentBookingBinding>(R.layout.fragment_b
       val fragment = BookingFragment()
       fragment.arguments = bundle
       return fragment
+    }
+    fun getIntent(context: Context, bundle: Bundle?): Intent {
+      val destIntent = Intent(context, BookingFragment::class.java)
+      destIntent.putExtra("bundle", bundle)
+      return destIntent
     }
   }
 }

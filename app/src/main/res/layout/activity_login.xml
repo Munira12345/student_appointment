@@ -12,7 +12,7 @@
         <FrameLayout
             android:id="@+id/frameStacktime"
             android:layout_width="match_parent"
-            android:layout_height="126dp"
+            android:layout_height="128dp"
             android:layout_gravity="start"
             android:layout_marginEnd="@dimen/_27pxh">
 

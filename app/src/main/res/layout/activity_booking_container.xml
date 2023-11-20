@@ -17,7 +17,8 @@
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="531dp"
-                android:text="Meeting booked successfully" />
+                android:text="Meeting booked successfully. time 9AM
+USERNAME IAN" />
         </FrameLayout>
         <FrameLayout android:gravity="center_horizontal"
             android:id="@+id/frameBottombar"

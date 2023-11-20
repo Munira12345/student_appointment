@@ -24,7 +24,8 @@ class RegistrationActivity :
 
 
 // creating latent var for binding
-  private lateinit var binding: ActivityRegistrationBinding
+
+  override lateinit var binding: ActivityRegistrationBinding
   private lateinit var firebaseAuth: FirebaseAuth
 
 

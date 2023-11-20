@@ -17,6 +17,9 @@ import kotlin.String
 import kotlin.Unit
 import androidx.core.content.ContextCompat.startActivity
 import com.munirasapplication.app.modules.registration.ui.RegistrationActivity
+import com.munirasapplication.app.modules.settings.ui.SettingsActivity
+import com.munirasapplication.app.modules.studentcalendar.ui.StudentCalendarActivity
+import com.munirasapplication.app.modules.studentschat.ui.StudentsChatActivity
 
 class DashboardActivity : BaseActivity<ActivityDashboardBinding>(R.layout.activity_dashboard) {
   private val viewModel: DashboardVM by viewModels<DashboardVM>()
@@ -35,13 +38,37 @@ class DashboardActivity : BaseActivity<ActivityDashboardBinding>(R.layout.activi
       startActivity(intent)
     }
 
+   //all the menu Navigations
+
+    // for the calendar
+    val imageCalendar= binding.root.findViewById<Button>(R.id.imageCalendar)
+    imageCalendar.setOnClickListener{
+      // handle the button click and navigate to student-calendar
+      val intent = Intent(this, StudentCalendarActivity::class.java)
+      startActivity(intent)
+    }
+    // for the chat
+    val imageSignalOne= binding.root.findViewById<Button>(R.id.imageSignalOne)
+    imageSignalOne.setOnClickListener{
+      // handle the button click and navigate to student chat
+      val intent = Intent(this, StudentsChatActivity::class.java)
+      startActivity(intent)
+    }
+    // for the settings za student
+    val imageUser= binding.root.findViewById<Button>(R.id.imageUser)
+    imageUser.setOnClickListener{
+      // handle the button click and navigate to settings
+      val intent = Intent(this, SettingsActivity::class.java)
+      startActivity(intent)
+    }
+
   }
 
   companion object {
     const val TAG: String = "DASHBOARD_ACTIVITY"
 
     fun getIntent(context: Context, bundle: Bundle?): Intent {
-      val destIntent = Intent(context, BookingFragment::class.java)
+      val destIntent = Intent(context, DashboardActivity::class.java)
       destIntent.putExtra("bundle", bundle)
       return destIntent
     }

@@ -9,10 +9,13 @@
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:orientation="vertical" style="@style/groupStylegray_50">
-        <FrameLayout android:id="@+id/frameStacktime"
+
+        <FrameLayout
+            android:id="@+id/frameStacktime"
+            android:layout_width="442dp"
+            android:layout_height="126dp"
             android:layout_gravity="start"
-            android:layout_height=""
-            android:layout_marginEnd="@dimen/_27pxh" android:layout_width="@dimen/_332pxh">
+            android:layout_marginEnd="@dimen/_27pxh">
 
             <ImageView
                 android:id="@+id/imageEllipseOne"
@@ -25,17 +28,20 @@
                 tools:ignore="ContentDescription"
                 tools:src="@drawable/img_ellipse1" />
         </FrameLayout>
-        <TextView android:ellipsize="end"
+
+        <TextView
             android:id="@+id/txtWelcomeOnBoard"
+            style="@style/txtPoppinssemibold18"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
             android:layout_gravity="center_horizontal"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="20.0dp"
             android:layout_marginStart="20.0dp"
             android:layout_marginTop="0dp"
-            android:layout_width="wrap_content"
+            android:layout_marginEnd="20.0dp"
+            android:ellipsize="end"
             android:singleLine="true"
             android:text="@{registrationVM.registrationModel.txtWelcomeOnBoard}"
-            style="@style/txtPoppinssemibold18" tools:text="@string/msg_welcome_onboard"/>
+            tools:text="@string/msg_welcome_onboard" />
         <TextView android:ellipsize="end"
             android:gravity="center_horizontal"
             android:id="@+id/txtGetmedicalass"
@@ -49,7 +55,6 @@
             android:text="@{registrationVM.registrationModel.txtGetmedicalass}"
             style="@style/txtPoppinsregular13_2" tools:text="@string/msg_get_medical_ass"/>
 
-        //added
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/emailLayout"
             style="@style/RegistrationTextInputOuterFieldStyle"
