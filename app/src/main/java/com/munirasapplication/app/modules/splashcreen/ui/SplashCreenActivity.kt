@@ -10,6 +10,7 @@ import androidx.activity.viewModels
 import com.munirasapplication.app.R
 import com.munirasapplication.app.appcomponents.base.BaseActivity
 import com.munirasapplication.app.databinding.ActivitySplashCreenBinding
+import com.munirasapplication.app.modules.dashboard.ui.DashboardActivity
 import com.munirasapplication.app.modules.login.ui.LoginActivity
 import com.munirasapplication.app.modules.registration.ui.RegistrationActivity
 import com.munirasapplication.app.modules.splashcreen.`data`.viewmodel.SplashCreenVM

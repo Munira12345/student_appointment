@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "721388471999",
+    "project_id": "munira-s-application7",
+    "storage_bucket": "munira-s-application7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:721388471999:android:494d543bf89053bbfa280a",
+        "android_client_info": {
+          "package_name": "com.munirasapplication.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBH7aD7PrAe1HWE1b8ZI2G5g1fhJjgiAto"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
