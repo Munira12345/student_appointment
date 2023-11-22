@@ -10,64 +10,61 @@ import com.munirasapplication.app.appcomponents.base.BaseActivity
 import com.munirasapplication.app.databinding.ActivityBookingContainerBinding
 import com.munirasapplication.app.extensions.loadFragment
 import com.munirasapplication.app.modules.booking.ui.BookingFragment
-import com.munirasapplication.app.modules.bookingcontainer.`data`.viewmodel.BookingContainerVM
+import com.munirasapplication.app.modules.bookingcontainer.data.viewmodel.BookingContainerVM
 import com.munirasapplication.app.modules.dashboard.ui.DashboardActivity
-import com.munirasapplication.app.modules.settings.ui.SettingsActivity
-import kotlin.String
-import kotlin.Unit
 
 class BookingContainerActivity :
     BaseActivity<ActivityBookingContainerBinding>(R.layout.activity_booking_container) {
-  private val viewModel: BookingContainerVM by viewModels<BookingContainerVM>()
 
-  override fun onInitialized(): Unit {
-    viewModel.navArguments = intent.extras?.getBundle("bundle")
-    binding.bookingContainerVM = viewModel
-    val destFragment = BookingFragment.getInstance(null)
-    this.loadFragment(
-        R.id.fragmentContainer,
-        destFragment,
-        bundle = destFragment.arguments, 
-        tag = BookingFragment.TAG, 
-        addToBackStack = false, 
-        add = false, 
-        enter = null, 
-        exit = null, 
-        )
-  }
+    private val viewModel: BookingContainerVM by viewModels()
 
-  override fun setUpClicks(): Unit {
-    binding.imageHome.setOnClickListener {
-      val destFragment = BookingFragment.getInstance(null)
-      this.loadFragment(
-          R.id.fragmentContainer,
-          destFragment,
-          bundle = destFragment.arguments, 
-          tag = BookingFragment.TAG, 
-          addToBackStack = true, 
-          add = false, 
-          enter = null, 
-          exit = null, 
-          )
+    override fun onInitialized() {
+        viewModel.navArguments = intent.extras?.getBundle("bundle")
+        binding.bookingContainerVM = viewModel
+
+        // Load the initial fragment (BookingFragment)
+        loadBookingFragment()
     }
 
-      val imageHome= binding.root.findViewById<Button>(R.id.imageHome)
-      imageHome.setOnClickListener{
-          // handle the button click and navigate to home page
-          val intent = Intent(this, DashboardActivity::class.java)
-          startActivity(intent)
-      }
+    override fun setUpClicks() {
+        // Click listener for the home button in the activity
+        binding.imageHome.setOnClickListener {
+            loadBookingFragment()
+        }
 
-  }
+        // Example: Click listener for a button inside the fragment (imageHome)
+        val imageHomeButton = binding.root.findViewById<Button>(R.id.imageHome)
+        imageHomeButton.setOnClickListener {
+            navigateToDashboard()
+        }
+    }
 
-  companion object {
-    const val TAG: String = "BOOKING_CONTAINER_ACTIVITY"
+    private fun loadBookingFragment() {
+        // Load the BookingFragment into the fragment container
+        loadFragment(
+            R.id.fragmentContainer,
+            BookingFragment.getInstance(null),
+            tag = BookingFragment.TAG,
+            addToBackStack = true,
+            add = false,
+            enter = null,
+            exit = null
+        )
+    }
 
-      fun getIntent(context: Context, bundle: Bundle?): Intent {
-          val destIntent = Intent(context, BookingContainerActivity::class.java)
-          destIntent.putExtra("bundle", bundle)
-          return destIntent
-      }
+    private fun navigateToDashboard() {
+        // Handle the button click and navigate to the DashboardActivity
+        val intent = Intent(this, DashboardActivity::class.java)
+        startActivity(intent)
+    }
 
-  }
+    companion object {
+        const val TAG: String = "BOOKING_CONTAINER_ACTIVITY"
+
+        fun getIntent(context: Context, bundle: Bundle?): Intent {
+            return Intent(context, BookingContainerActivity::class.java).apply {
+                putExtra("bundle", bundle)
+            }
+        }
+    }
 }

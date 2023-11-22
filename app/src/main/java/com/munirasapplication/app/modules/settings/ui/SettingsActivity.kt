@@ -24,35 +24,34 @@ class SettingsActivity : BaseActivity<ActivitySettingsBinding>(R.layout.activity
   }
 
   override fun setUpClicks(): Unit {
+
+
+    //all the menu navigations
+    //for the image home
+
+
+    val imageHome = binding.root.findViewById<Button>(R.id.imageHome)
+    imageHome.setOnClickListener {
+      // handle the button click and navigate to dashboard
+      val intent = Intent(this, DashboardActivity::class.java)
+      startActivity(intent)
+    }
+    // for the calendar
+    val imageCalendar = binding.root.findViewById<Button>(R.id.imageCalendar)
+    imageCalendar.setOnClickListener {
+      // handle the button click and navigate to studentcalendar
+      val intent = Intent(this, StudentCalendarActivity::class.java)
+      startActivity(intent)
+    }
+    // for the chat
+    val imageSignalOne = binding.root.findViewById<Button>(R.id.imageSignalOne)
+    imageSignalOne.setOnClickListener {
+      // handle the button click and navigate to studentchat
+      val intent = Intent(this, StudentsChatActivity::class.java)
+      startActivity(intent)
+    }
+
   }
-
-
-  //all the menu navigations
-  //for the image home
-
-
-  val imageHome= binding.root.findViewById<Button>(R.id.imageHome)
-  imageHome.setOnClickListener{
-    // handle the button click and navigate to dashboard
-    val intent = Intent(this, DashboardActivity::class.java)
-    startActivity(intent)
-  }
-  // for the calendar
-  val imageCalendar= binding.root.findViewById<Button>(R.id.imageCalendar)
-  imageCalendar.setOnClickListener{
-    // handle the button click and navigate to studentcalendar
-    val intent = Intent(this, StudentCalendarActivity::class.java)
-    startActivity(intent)
-  }
-  // for the chat
-  val imageSignalOne= binding.root.findViewById<Button>(R.id.imageSignalOne)
-  imageSignalOne.setOnClickListener{
-    // handle the button click and navigate to studentchat
-    val intent = Intent(this, StudentsChatActivity::class.java)
-    startActivity(intent)
-  }
-
-
   companion object {
     const val TAG: String = "SETTINGS_ACTIVITY"
 

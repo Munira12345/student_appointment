@@ -8,12 +8,9 @@ import androidx.fragment.app.viewModels
 import com.munirasapplication.app.R
 import com.munirasapplication.app.appcomponents.base.BaseFragment
 import com.munirasapplication.app.databinding.FragmentBookingBinding
-import com.munirasapplication.app.modules.booking.`data`.model.BookingRowModel
-import com.munirasapplication.app.modules.booking.`data`.viewmodel.BookingVM
+import com.munirasapplication.app.modules.booking.data.model.BookingRowModel
+import com.munirasapplication.app.modules.booking.data.viewmodel.BookingVM
 import com.munirasapplication.app.modules.bookingcontainer.ui.BookingContainerActivity
-import com.munirasapplication.app.modules.login.ui.LoginActivity
-import kotlin.Int
-import kotlin.String
 import kotlin.Unit
 import android.content.Intent
 import com.munirasapplication.app.modules.dashboard.ui.DashboardActivity
@@ -21,70 +18,67 @@ import com.munirasapplication.app.modules.dashboard.ui.DashboardActivity
 class BookingFragment : BaseFragment<FragmentBookingBinding>(R.layout.fragment_booking) {
   private val viewModel: BookingVM by viewModels<BookingVM>()
 
-  override fun onInitialized(): Unit {
+  override fun onInitialized() {
     viewModel.navArguments = arguments
-    val bookingAdapter = BookingAdapter(viewModel.bookingList.value?:mutableListOf())
+
+    // Initializing the adapter with an empty list for now
+    val bookingAdapter = BookingAdapter(emptyList())
     binding.recyclerBooking.adapter = bookingAdapter
-    bookingAdapter.setOnItemClickListener(
-    object : BookingAdapter.OnItemClickListener {
-      override fun onItemClick(view:View, position:Int, item : BookingRowModel) {
+
+    bookingAdapter.setOnItemClickListener(object : BookingAdapter.OnItemClickListener {
+      override fun onItemClick(view: View, position: Int, item: BookingRowModel) {
         onClickRecyclerBooking(view, position, item)
       }
-    }
-    )
-    viewModel.bookingList.observe(requireActivity()) {
+    })
+
+    // Observing changes in the bookingList LiveData and updating the adapter
+    viewModel.bookingList.observe(viewLifecycleOwner) {
       bookingAdapter.updateData(it)
     }
+
     binding.bookingVM = viewModel
   }
 
-  override fun setUpClicks(): Unit {
-//added code
-    val viewRectangleThirteen = binding.root.findViewById<View>(R.id.viewRectangleThirteen)
-    viewRectangleThirteen.setOnClickListener {
-      // handle the text view click and navigate to saved
-      val intent = Intent(this, BookingContainerActivity::class.java)
-      startActivity(intent)
-    }
-    val btn800Am = binding.root.findViewById<View>(R.id.btn800Am)
-    btn800Am.setOnClickListener {
-      // handle the text view click and navigate to saved
-      val intent = Intent(this, BookingContainerActivity::class.java)
-      startActivity(intent)
-    }
-    val recyclerBooking = binding.root.findViewById<View>(R.id.recyclerBooking)
-    recyclerBooking.setOnClickListener {
-      // handle the text view click and navigate to saved
-      val intent = Intent(this, BookingContainerActivity::class.java)
-      startActivity(intent)
+  override fun setUpClicks() {
+    // Click listener for the "viewRectangleThirteen" view
+    binding.viewRectangleThirteen.setOnClickListener {
+      navigateToBookingContainerActivity()
     }
 
-    val imagePlus = binding.root.findViewById<View>(R.id.imagePlus)
-    imagePlus.setOnClickListener {
-      // handle the text view click and navigate to saved
-      val intent = Intent(this, BookingContainerActivity::class.java)
-      startActivity(intent)
+    // Similar click listeners for other views
+    binding.btn800Am.setOnClickListener {
+      navigateToBookingContainerActivity()
+    }
+
+    binding.recyclerBooking.setOnClickListener {
+      navigateToBookingContainerActivity()
+    }
+
+    binding.imagePlus.setOnClickListener {
+      navigateToBookingContainerActivity()
     }
   }
 
-  fun onClickRecyclerBooking(
-    view: View,
-    position: Int,
-    item: BookingRowModel
-  ): Unit {
-    when(view.id) {
-    }
+  private fun navigateToBookingContainerActivity() {
+    // Handle the text view click and navigate to BookingContainerActivity
+    val intent = Intent(requireContext(), BookingContainerActivity::class.java)
+    startActivity(intent)
+  }
+
+  private fun onClickRecyclerBooking(view: View, position: Int, item: BookingRowModel) {
+    // Handle click events on the recycler view item if needed
+    // (You can add code here based on the specific item clicked)
   }
 
   companion object {
     const val TAG: String = "BOOKING_FRAGMENT"
-
 
     fun getInstance(bundle: Bundle?): BookingFragment {
       val fragment = BookingFragment()
       fragment.arguments = bundle
       return fragment
     }
+
     fun getIntent(context: Context, bundle: Bundle?): Intent {
       val destIntent = Intent(context, BookingFragment::class.java)
       destIntent.putExtra("bundle", bundle)
@@ -92,3 +86,4 @@ class BookingFragment : BaseFragment<FragmentBookingBinding>(R.layout.fragment_b
     }
   }
 }
+

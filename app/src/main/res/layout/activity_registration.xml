@@ -21,39 +21,42 @@
                 android:id="@+id/imageEllipseOne"
                 imageRes="@{@drawable/img_ellipse1}"
                 android:layout_width="@dimen/_137pxh"
-                android:layout_height="@dimen/_187pxh"
+                android:layout_height="100dp"
                 android:layout_gravity="start"
                 android:layout_marginEnd="@dimen/_10pxh"
                 android:scaleType="fitXY"
                 tools:ignore="ContentDescription"
                 tools:src="@drawable/img_ellipse1" />
-        </FrameLayout>
 
-        <TextView
-            android:id="@+id/txtWelcomeOnBoard"
-            style="@style/txtPoppinssemibold18"
-            android:layout_width="wrap_content"
-            android:layout_height="80dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginStart="20.0dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginEnd="20.0dp"
-            android:ellipsize="end"
-            android:singleLine="true"
-            android:text="@{registrationVM.registrationModel.txtWelcomeOnBoard}"
-            tools:text="@string/msg_welcome_onboard" />
-        <TextView android:ellipsize="end"
-            android:gravity="center_horizontal"
-            android:id="@+id/txtGetmedicalass"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/_20pxh"
-            android:layout_marginStart="@dimen/_20pxh"
-            android:layout_marginTop="@dimen/_19pxv"
-            android:layout_width="match_parent"
-            android:lineSpacingExtra="@dimen/_7pxh"
-            android:singleLine="true"
-            android:text="@{registrationVM.registrationModel.txtGetmedicalass}"
-            style="@style/txtPoppinsregular13_2" tools:text="@string/msg_get_medical_ass"/>
+            <TextView
+                android:id="@+id/txtWelcomeOnBoard"
+                style="@style/txtPoppinssemibold18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="20.0dp"
+                android:layout_marginTop="65dp"
+                android:layout_marginEnd="20.0dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@{registrationVM.registrationModel.txtWelcomeOnBoard}"
+                tools:text="@string/msg_welcome_onboard" />
+
+            <TextView
+                android:id="@+id/txtGetmedicalass"
+                style="@style/txtPoppinsregular13_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20pxh"
+                android:layout_marginTop="@dimen/_105pxv"
+                android:layout_marginEnd="@dimen/_20pxh"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:lineSpacingExtra="@dimen/_7pxh"
+                android:singleLine="true"
+                android:text="@{registrationVM.registrationModel.txtGetmedicalass}"
+                tools:text="@string/msg_get_medical_ass" />
+        </FrameLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/emailLayout"
@@ -121,20 +124,25 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:ellipsize="end" android:gravity="center"
             android:id="@+id/btnRegisterOne"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/_20pxh"
-            android:layout_marginStart="@dimen/_20pxh"
-            android:layout_marginTop="@dimen/_35pxv"
+            style="@style/btnSolid"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12pxh"
+            android:layout_marginTop="@dimen/_6pxh"
+            android:layout_marginEnd="@dimen/_20pxh"
+            android:ellipsize="end"
+            android:gravity="center"
             android:lineSpacingExtra="@dimen/_9pxh"
-            android:paddingBottom="@dimen/_16pxv"
-            android:paddingEnd="@dimen/_30pxh"
             android:paddingStart="@dimen/_30pxh"
-            android:paddingTop="@dimen/_16pxv" android:singleLine="true"
+            android:paddingTop="@dimen/_16pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingBottom="@dimen/_16pxv"
+            android:singleLine="true"
             android:text="@string/lbl_register"
-            android:textAllCaps="false" style="@style/btnSolid" tools:text="@string/lbl_register"/>
+            android:textAllCaps="false"
+            tools:text="@string/lbl_register" />
+
         <TextView android:ellipsize="end" android:gravity="start"
             android:id="@+id/txtConfirmation"
             android:layout_height="wrap_content"
