@@ -125,6 +125,7 @@
                     android:src="@drawable/img_arrowright"
                     tools:ignore="ContentDescription" tools:src="@drawable/img_arrowright"/>
             </LinearLayout>
+
             <LinearLayout android:gravity="start"
                 android:id="@+id/linearRowundrawsaveto"
                 android:layout_height="wrap_content"
@@ -133,7 +134,7 @@
                 android:layout_marginTop="@dimen/_109pxv"
                 android:layout_width="match_parent"
                 android:orientation="horizontal" style="@style/groupStylebluegray_50_a0cornerRadius">
-                <ImageView android:id="@+id/imageUndrawsaveto"
+                <ImageView android:id="@+id/button1"
                     android:layout_height="@dimen/_64pxh"
                     android:layout_marginBottom="@dimen/_11pxv"
                     android:layout_marginStart="@dimen/_24pxh"
@@ -144,19 +145,18 @@
                     tools:ignore="ContentDescription" tools:src="@drawable/img_undrawwelldon"/>
 
                 <Button
-                    android:id="@+id/button1"
+                    android:id="@+id/button2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0."
                     android:text="Book Appointment"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    style="@style/txtPoppinssemibold12" tools:text=" Book Appointments "/>
-
+                    android:layout_marginBottom="@dimen/_11pxv"
+                    android:layout_marginStart="@dimen/_24pxh"
+                    android:layout_marginTop="@dimen/_8pxv"
+                    style="@style/txtPoppinssemibold12" tools:text=" Book Appointments"/>
             </LinearLayout>
-
         </LinearLayout>
+
         <FrameLayout android:gravity="center_horizontal"
             android:id="@+id/frameBottombar"
             android:layout_height="wrap_content"

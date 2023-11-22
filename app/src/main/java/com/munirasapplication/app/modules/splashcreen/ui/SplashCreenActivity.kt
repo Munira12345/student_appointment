@@ -10,8 +10,7 @@ import androidx.activity.viewModels
 import com.munirasapplication.app.R
 import com.munirasapplication.app.appcomponents.base.BaseActivity
 import com.munirasapplication.app.databinding.ActivitySplashCreenBinding
-import com.munirasapplication.app.modules.dashboard.ui.DashboardActivity
-import com.munirasapplication.app.modules.login.ui.LoginActivity
+import com.munirasapplication.app.modules.Registrationa
 import com.munirasapplication.app.modules.registration.ui.RegistrationActivity
 import com.munirasapplication.app.modules.splashcreen.`data`.viewmodel.SplashCreenVM
 import kotlin.String
@@ -25,7 +24,7 @@ class SplashCreenActivity : BaseActivity<ActivitySplashCreenBinding>(R.layout.ac
     viewModel.navArguments = intent.extras?.getBundle("bundle")
     binding.splashCreenVM = viewModel
     Handler(Looper.getMainLooper()).postDelayed( {
-      val destIntent = RegistrationActivity.getIntent(this, null)
+      val destIntent = Intent(this, Registrationa::class.java)
       startActivity(destIntent)
       finish()
       }, 3000)
@@ -35,7 +34,7 @@ class SplashCreenActivity : BaseActivity<ActivitySplashCreenBinding>(R.layout.ac
       val button3 = binding.root.findViewById<TextView>(R.id.button3)
       button3.setOnClickListener {
         // handle the text view click and navigate to login activity
-        val intent = Intent(this, RegistrationActivity::class.java)
+        val intent = Intent(this, Registrationa::class.java)
         startActivity(intent)
       }
 

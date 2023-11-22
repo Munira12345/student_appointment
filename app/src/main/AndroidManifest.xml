@@ -1,43 +1,77 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<manifest package="com.munirasapplication.app" xmlns:android="http://schemas.android.com/apk/res/android">
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <application android:allowBackup="false"
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.munirasapplication.app">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".appcomponents.di.MyApp"
+        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name" android:largeHeap="true"
-        android:name="com.munirasapplication.app.appcomponents.di.MyApp"
+        android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true" android:theme="@style/Theme.MyApp" android:usesCleartextTraffic="true">
-        <activity android:exported="true"
-            android:name="com.munirasapplication.app.modules.splashcreen.ui.SplashCreenActivity" android:screenOrientation="portrait">
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApp"
+        android:usesCleartextTraffic="true">
+
+        <activity
+            android:name=".modules.splashcreen.ui.SplashCreenActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.munirasapplication.app.modules.patientrequests.ui.PatientRequestsActivity" android:screenOrientation="portrait"/>
+            android:name=".modules.patientrequests.ui.PatientRequestsActivity"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.munirasapplication.app.modules.doctorsprofile.ui.DoctorsProfileActivity" android:screenOrientation="portrait"/>
+            android:name=".modules.doctorsprofile.ui.DoctorsProfileActivity"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.munirasapplication.app.modules.bookingcontainer.ui.BookingContainerActivity" android:screenOrientation="portrait"/>
+            android:name=".modules.bookingcontainer.ui.BookingContainerActivity"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.munirasapplication.app.modules.doctorscalendar.ui.DoctorsCalendarActivity" android:screenOrientation="portrait"/>
+            android:name=".modules.doctorscalendar.ui.DoctorsCalendarActivity"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.munirasapplication.app.modules.settings.ui.SettingsActivity" android:screenOrientation="portrait"/>
+            android:name=".modules.settings.ui.SettingsActivity"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.munirasapplication.app.modules.studentschat.ui.StudentsChatActivity" android:screenOrientation="portrait"/>
+            android:name=".modules.studentschat.ui.StudentsChatActivity"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.munirasapplication.app.modules.dotorschat.ui.DotorsChatActivity" android:screenOrientation="portrait"/>
+            android:name=".modules.dotorschat.ui.DotorsChatActivity"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.munirasapplication.app.modules.studentcalendar.ui.StudentCalendarActivity" android:screenOrientation="portrait"/>
+            android:name=".modules.studentcalendar.ui.StudentCalendarActivity"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.munirasapplication.app.modules.settingsone.ui.SettingsOneActivity" android:screenOrientation="portrait"/>
+            android:name=".modules.settingsone.ui.SettingsOneActivity"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.munirasapplication.app.modules.dashboard.ui.DashboardActivity" android:screenOrientation="portrait"/>
+            android:name=".modules.dashboard.ui.DashboardActivity"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.munirasapplication.app.modules.login.ui.LoginActivity" android:screenOrientation="portrait"/>
+            android:name=".modules.login.ui.LoginActivity"
+            android:screenOrientation="portrait" />
         <activity
-            android:name="com.munirasapplication.app.modules.registration.ui.RegistrationActivity" android:screenOrientation="portrait"/>
+            android:name=".modules.registration.ui.RegistrationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.Registrationa"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".modules.login.ui.LoginA"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+
     </application>
+
 </manifest>

@@ -32,7 +32,7 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>(R.layout.activity_login
     }
 
     // Click listener for the login button
-    binding.btnRegisterOne.setOnClickListener {
+    binding.btnLogin.setOnClickListener {
       attemptLogin()
     }
   }
