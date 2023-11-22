@@ -69,7 +69,7 @@ class RegistrationActivity : BaseActivity<ActivityRegistrationBinding>(R.layout.
       }
     }
   }
-
+/*
  val btnRegisterOne = binding.root.findViewById<btnRegisterOne>(R.id.btnRegisterOne)
   btnRegisterOne.setOnClickListener {
     // Handle the button click and navigate to DashboardActivity
@@ -85,7 +85,7 @@ class RegistrationActivity : BaseActivity<ActivityRegistrationBinding>(R.layout.
   }
 }
 
-
+*/
   companion object {
     const val TAG: String = "REGISTRATION_ACTIVITY"
 
