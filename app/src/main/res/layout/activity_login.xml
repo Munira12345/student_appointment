@@ -7,6 +7,7 @@
     <LinearLayout android:gravity="end" android:id="@+id/linearLogin"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
+        android:background="@android:color/black"
         android:orientation="vertical" style="@style/groupStylegray_50">
 
         <FrameLayout
@@ -99,7 +100,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:ellipsize="end" android:gravity="center"
-            android:id="@+id/btnRegisterOne"
+            android:id="@+id/btnLogin"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/_23pxh"
             android:layout_marginStart="@dimen/_23pxh"

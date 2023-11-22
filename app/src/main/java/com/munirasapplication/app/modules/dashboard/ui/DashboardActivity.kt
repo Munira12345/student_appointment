@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.core.content.ContextCompat.startActivity
@@ -31,7 +32,7 @@ class DashboardActivity : BaseActivity<ActivityDashboardBinding>(R.layout.activi
 
   override fun setUpClicks(): Unit {
     // added code
-    val button1 = binding.root.findViewById<Button>(R.id.button1)
+    val button1 = binding.root.findViewById<Button>(R.id.button2)
     button1.setOnClickListener{
       // handle the button click and navigate to booking fragment
       val intent = Intent(this, BookingFragment::class.java)
