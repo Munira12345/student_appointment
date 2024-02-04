@@ -10,6 +10,7 @@ import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FirebaseAuth
 import com.munirasapplication.app.R
+import com.munirasapplication.app.modules.Registrationa
 import com.munirasapplication.app.modules.dashboard.ui.DashboardActivity
 
 class LoginA : AppCompatActivity() {
@@ -24,10 +25,10 @@ class LoginA : AppCompatActivity() {
 
         val emailLayout: TextInputLayout = findViewById(R.id.emailLayout)
         val passwordLayout: TextInputLayout = findViewById(R.id.passwordLayout)
-        val loginButton: Button = findViewById(R.id.btnLogin)
+        val btnLogin: Button = findViewById(R.id.btnLogin)
         val txtConfirmation = findViewById<TextView>(R.id.txtConfirmation)
 
-        loginButton.setOnClickListener {
+        btnLogin.setOnClickListener {
             val emailEditText: TextInputEditText = emailLayout.findViewById(R.id.btnEnterYourEmailOne)
             val passwordEditText: TextInputEditText = passwordLayout.findViewById(R.id.passET)
 
@@ -42,31 +43,56 @@ class LoginA : AppCompatActivity() {
         }
 
         txtConfirmation.setOnClickListener {
-            navigateToRegistration()
+            val intent = Intent(this, Registrationa::class.java)
+            startActivity(intent)
         }
     }
 
-    private fun signInWithEmailAndPassword(email: String, password: String) {
-//        firebaseAuth.signInWithEmailAndPassword(email, password)
-//            .addOnCompleteListener { task ->
-//                if (task.isSuccessful) {
-//                    navigateToDashboard()
-//                } else {
-//                    val errorMessage = task.exception?.message
-//                    showToast("Login Failed: $errorMessage")
-//                }
-//            }
+      /*private fun signInWithEmailAndPassword(email: String, password: String) {
+    firebaseAuth.signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    navigateToDashboard()
+                } else {
+                    val errorMessage = task.exception?.message
+                   showToast("Login Failed: $errorMessage")
+                }
+
+            }
+
+
+
         val intent = Intent(this, DashboardActivity::class.java)
         startActivity(intent)
         finish()
         showToast("Login Successful")
+}
+*/
+
+
+    private fun signInWithEmailAndPassword(email: String, password: String) {
+        firebaseAuth.signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    // Authentication successful, navigate to DashboardActivity
+                    val intent = Intent(this, DashboardActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                    showToast("Login Successful")
+                } else {
+                    val errorMessage = task.exception?.message
+                    showToast("Login Failed: $errorMessage")
+                }
+            }
     }
 
-    private fun navigateToDashboard() {
+  /*  private fun navigateToDashboard() {
         val intent = Intent(this, DashboardActivity::class.java)
         startActivity(intent)
         finish()
     }
+
+*/
 
     private fun navigateToRegistration() {
 

@@ -32,12 +32,14 @@ class DashboardActivity : BaseActivity<ActivityDashboardBinding>(R.layout.activi
 
   override fun setUpClicks(): Unit {
     // added code
-    val button1 = binding.root.findViewById<Button>(R.id.button2)
-    button1.setOnClickListener{
+    val button2 = binding.root.findViewById<Button>(R.id.button2)
+    button2.setOnClickListener{
       // handle the button click and navigate to booking fragment
       val intent = Intent(this, BookingFragment::class.java)
       startActivity(intent)
     }
+
+    //added on wed
 
    //all the menu Navigations
 

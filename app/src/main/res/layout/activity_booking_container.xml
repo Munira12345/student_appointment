@@ -9,22 +9,18 @@
         android:layout_marginBottom="@dimen/_17pxv"
         android:layout_width="match_parent"
         android:orientation="vertical" style="@style/groupStylegray_50">
-        <FrameLayout android:id="@+id/fragmentContainer"
-            android:layout_height="match_parent"
-            android:layout_weight="1" android:layout_width="match_parent">
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="match_parent"
-                android:layout_height="531dp"
-                android:text="Meeting booked successfully. time 9AM
-USERNAME IAN" />
-        </FrameLayout>
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="18dp"
+            android:text="Meeting booked successfully."/>
         <FrameLayout android:gravity="center_horizontal"
             android:id="@+id/frameBottombar"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/_22pxh"
-            android:layout_marginStart="@dimen/_25pxh"
+            android:layout_marginTop="500.3dp"
+            android:layout_marginStart="25.3dp"
             android:layout_width="match_parent" style="@style/groupStylebluegray_100_51cornerRadius">
             <LinearLayout android:id="@+id/linearRowhome"
                 android:layout_height="match_parent"
@@ -38,8 +34,8 @@ USERNAME IAN" />
                     android:layout_marginTop="@dimen/_2pxv"
                     android:layout_width="@dimen/_25pxh"
                     android:scaleType="fitXY"
-                    android:src="@drawable/img_home_gray_700"
-                    tools:ignore="ContentDescription" tools:src="@drawable/img_home_gray_700"/>
+                    android:src="@drawable/img_home"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_home"/>
                 <ImageView android:id="@+id/imageCalendar"
                     android:layout_gravity="center"
                     android:layout_height="@dimen/_25pxh"
@@ -71,4 +67,5 @@ USERNAME IAN" />
             </LinearLayout>
         </FrameLayout>
     </LinearLayout>
+
 </layout>

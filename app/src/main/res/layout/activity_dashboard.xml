@@ -44,7 +44,7 @@
                         tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse1_2"/>
                 </FrameLayout>
                 <TextView android:ellipsize="end"
-                    android:id="@+id/txtGoodmorningian"
+                    android:id="@+id/txtGoodmorning"
                     android:layout_gravity="end"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/_10pxv"

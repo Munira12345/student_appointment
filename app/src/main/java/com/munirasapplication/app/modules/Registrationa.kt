@@ -52,7 +52,7 @@ class Registrationa : AppCompatActivity() {
         }
 
         loginButton.setOnClickListener {
-            val intent = Intent(this, LoginA::class.java)
+            val intent = Intent(this, DashboardActivity::class.java)
             startActivity(intent)
         }
     }

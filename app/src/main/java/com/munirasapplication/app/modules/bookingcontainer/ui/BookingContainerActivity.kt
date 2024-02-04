@@ -37,6 +37,7 @@ class BookingContainerActivity :
         imageHomeButton.setOnClickListener {
             navigateToDashboard()
         }
+
     }
 
     private fun loadBookingFragment() {
