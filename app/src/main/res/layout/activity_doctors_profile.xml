@@ -58,7 +58,7 @@
                     android:gravity="center_horizontal"
                     android:singleLine="true"
                     android:text="@{doctorsProfileVM.doctorsProfileModel.txtGoodmorningFra}"
-                    tools:text="@string/msg_goodmorning_fra" />
+                    tools:text="Hello User" />
             </LinearLayout>
 
             <Button

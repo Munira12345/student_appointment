@@ -20,7 +20,6 @@ import androidx.core.content.ContextCompat.startActivity
 import com.munirasapplication.app.modules.registration.ui.RegistrationActivity
 import com.munirasapplication.app.modules.settings.ui.SettingsActivity
 import com.munirasapplication.app.modules.studentcalendar.ui.StudentCalendarActivity
-import com.munirasapplication.app.modules.studentschat.ui.StudentsChatActivity
 
 class DashboardActivity : BaseActivity<ActivityDashboardBinding>(R.layout.activity_dashboard) {
   private val viewModel: DashboardVM by viewModels<DashboardVM>()
@@ -39,7 +38,6 @@ class DashboardActivity : BaseActivity<ActivityDashboardBinding>(R.layout.activi
       startActivity(intent)
     }
 
-    //added on wed
 
    //all the menu Navigations
 
@@ -50,13 +48,7 @@ class DashboardActivity : BaseActivity<ActivityDashboardBinding>(R.layout.activi
       val intent = Intent(this, StudentCalendarActivity::class.java)
       startActivity(intent)
     }
-    // for the chat
-    val imageSignalOne= binding.root.findViewById<Button>(R.id.imageSignalOne)
-    imageSignalOne.setOnClickListener{
-      // handle the button click and navigate to student chat
-      val intent = Intent(this, StudentsChatActivity::class.java)
-      startActivity(intent)
-    }
+
     // for the settings za student
     val imageUser= binding.root.findViewById<Button>(R.id.imageUser)
     imageUser.setOnClickListener{

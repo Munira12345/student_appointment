@@ -17,11 +17,28 @@ class LoginA : AppCompatActivity() {
 
     private lateinit var firebaseAuth: FirebaseAuth
 
+
+    /*added code for moving registered user to dashboard
+   override fun onStart() {
+    super.onStart()
+
+    // Check if the user is already logged in
+    val currentUser = firebaseAuth.currentUser
+    if (currentUser != null) {
+        // User is already logged in, navigate to DashboardActivity
+        navigateToDashboard()
+    }
+}
+
+*/
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login2)
 
         firebaseAuth = FirebaseAuth.getInstance()
+
+        //creating all the objects
 
         val emailLayout: TextInputLayout = findViewById(R.id.emailLayout)
         val passwordLayout: TextInputLayout = findViewById(R.id.passwordLayout)
@@ -86,13 +103,13 @@ class LoginA : AppCompatActivity() {
             }
     }
 
-  /*  private fun navigateToDashboard() {
+    private fun navigateToDashboard() {
         val intent = Intent(this, DashboardActivity::class.java)
         startActivity(intent)
         finish()
     }
 
-*/
+
 
     private fun navigateToRegistration() {
 

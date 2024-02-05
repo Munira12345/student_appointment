@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.airbnb.lottie.L
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FirebaseAuth
@@ -27,6 +28,13 @@ class Registrationa : AppCompatActivity() {
         val passwordLayout: TextInputLayout = findViewById(R.id.passwordLayout)
         val registerButton: Button = findViewById(R.id.registerButton)
         val loginButton: Button = findViewById(R.id.loginButton)
+
+
+
+        loginButton.setOnClickListener {
+            val intent = Intent(this, LoginA::class.java)
+            startActivity(intent)
+        }
 
         registerButton.setOnClickListener {
             val emailEditText: TextInputEditText = emailLayout.findViewById(R.id.emailEditText)
@@ -51,9 +59,6 @@ class Registrationa : AppCompatActivity() {
             }
         }
 
-        loginButton.setOnClickListener {
-            val intent = Intent(this, DashboardActivity::class.java)
-            startActivity(intent)
-        }
+
     }
 }

@@ -15,7 +15,6 @@ import com.munirasapplication.app.modules.doctorscalendar.`data`.viewmodel.Docto
 import com.munirasapplication.app.modules.doctorsprofile.ui.DoctorsProfileActivity
 import com.munirasapplication.app.modules.settings.ui.SettingsActivity
 import com.munirasapplication.app.modules.settingsone.ui.SettingsOneActivity
-import com.munirasapplication.app.modules.studentschat.ui.StudentsChatActivity
 import kotlin.Int
 import kotlin.String
 import kotlin.Unit
@@ -49,13 +48,6 @@ class DoctorsCalendarActivity :
     imageHome.setOnClickListener{
       // handle the button click and navigate to profile
       val intent = Intent(this, DoctorsProfileActivity::class.java)
-      startActivity(intent)
-    }
-    // for the chat
-    val imageSignalOne= binding.root.findViewById<Button>(R.id.imageSignalOne)
-    imageSignalOne.setOnClickListener{
-      // handle the button click and navigate to doctor chat
-      val intent = Intent(this, StudentsChatActivity::class.java)
       startActivity(intent)
     }
     // for the settings za student

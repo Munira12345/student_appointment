@@ -12,13 +12,11 @@ import com.munirasapplication.app.databinding.ActivityPatientRequestsBinding
 import com.munirasapplication.app.modules.dashboard.ui.DashboardActivity
 import com.munirasapplication.app.modules.doctorscalendar.ui.DoctorsCalendarActivity
 import com.munirasapplication.app.modules.doctorsprofile.ui.DoctorsProfileActivity
-import com.munirasapplication.app.modules.dotorschat.ui.DotorsChatActivity
 import com.munirasapplication.app.modules.patientrequests.`data`.model.Listunsplashptrhfm1RowModel
 import com.munirasapplication.app.modules.patientrequests.`data`.viewmodel.PatientRequestsVM
 import com.munirasapplication.app.modules.settings.ui.SettingsActivity
 import com.munirasapplication.app.modules.settingsone.ui.SettingsOneActivity
 import com.munirasapplication.app.modules.studentcalendar.ui.StudentCalendarActivity
-import com.munirasapplication.app.modules.studentschat.ui.StudentsChatActivity
 import kotlin.Int
 import kotlin.String
 import kotlin.Unit
@@ -62,13 +60,7 @@ class PatientRequestsActivity :
       val intent = Intent(this, DoctorsCalendarActivity::class.java)
       startActivity(intent)
     }
-    // for the chat
-    val imageSignalOne= binding.root.findViewById<Button>(R.id.imageSignalOne)
-    imageSignalOne.setOnClickListener{
-      // handle the button click and navigate to doctors chat
-      val intent = Intent(this, DotorsChatActivity::class.java)
-      startActivity(intent)
-    }
+
     // for the settings za student
     val imageUser= binding.root.findViewById<Button>(R.id.imageUser)
     imageUser.setOnClickListener{

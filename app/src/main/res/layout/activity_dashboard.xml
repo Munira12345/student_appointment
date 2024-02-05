@@ -54,7 +54,7 @@
                     android:layout_width="wrap_content"
                     android:singleLine="true"
                     android:text="@{dashboardVM.dashboardModel.txtGoodmorningian}"
-                    style="@style/txtPoppinssemibold18_1" tools:text="@string/msg_goodmorning_ian"/>
+                    style="@style/txtPoppinssemibold18_1" tools:text="hello app user"/>
             </LinearLayout>
             <TextView android:ellipsize="end"
                 android:gravity="center_horizontal"

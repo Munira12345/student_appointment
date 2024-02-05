@@ -13,7 +13,6 @@ import com.munirasapplication.app.modules.dashboard.ui.DashboardActivity
 import com.munirasapplication.app.modules.settings.ui.SettingsActivity
 import com.munirasapplication.app.modules.studentcalendar.`data`.model.ListtextRowModel
 import com.munirasapplication.app.modules.studentcalendar.`data`.viewmodel.StudentCalendarVM
-import com.munirasapplication.app.modules.studentschat.ui.StudentsChatActivity
 import kotlin.Int
 import kotlin.String
 import kotlin.Unit
@@ -46,13 +45,6 @@ class StudentCalendarActivity :
     imageHome.setOnClickListener{
       // handle the button click and navigate to studentcalendar
       val intent = Intent(this, DashboardActivity::class.java)
-      startActivity(intent)
-    }
-    // for the chat
-    val imageSignalOne= binding.root.findViewById<Button>(R.id.imageSignalOne)
-    imageSignalOne.setOnClickListener{
-      // handle the button click and navigate to studentchat
-      val intent = Intent(this, StudentsChatActivity::class.java)
       startActivity(intent)
     }
     // for the settings za student
