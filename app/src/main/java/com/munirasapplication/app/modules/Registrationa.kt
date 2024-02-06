@@ -5,14 +5,10 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.airbnb.lottie.L
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FirebaseAuth
 import com.munirasapplication.app.R
-import com.munirasapplication.app.modules.dashboard.ui.DashboardActivity
-import com.munirasapplication.app.modules.login.ui.LoginA
-import com.munirasapplication.app.modules.login.ui.LoginActivity
 
 class Registrationa : AppCompatActivity() {
 

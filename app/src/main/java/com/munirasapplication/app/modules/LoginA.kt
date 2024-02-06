@@ -1,4 +1,4 @@
-package com.munirasapplication.app.modules.login.ui
+package com.munirasapplication.app.modules
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,7 +10,6 @@ import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FirebaseAuth
 import com.munirasapplication.app.R
-import com.munirasapplication.app.modules.Registrationa
 import com.munirasapplication.app.modules.dashboard.ui.DashboardActivity
 
 class LoginA : AppCompatActivity() {
