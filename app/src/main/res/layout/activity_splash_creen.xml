@@ -47,16 +47,6 @@
             android:singleLine="true"
             android:text="@{splashCreenVM.splashCreenModel.txtLanguage}"
             style="@style/txtPoppinssemibold18" tools:text="@string/msg_all_your_medica"/>
-        <TextView android:gravity="center_horizontal"
-            android:id="@+id/txtDescription"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/_12pxh"
-            android:layout_marginStart="@dimen/_12pxh"
-            android:layout_marginTop="@dimen/_15pxv"
-            android:layout_width="match_parent"
-            android:lineSpacingExtra="@dimen/_10pxh"
-            android:text="@{splashCreenVM.splashCreenModel.txtDescription}"
-            style="@style/txtPoppinsregular13_1" tools:text="Click get started to start your journey with us"/>
 
         <Button
             android:id="@+id/button3"

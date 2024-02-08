@@ -11,7 +11,6 @@ import com.munirasapplication.app.R
 import com.munirasapplication.app.appcomponents.base.BaseActivity
 import com.munirasapplication.app.databinding.ActivitySplashCreenBinding
 import com.munirasapplication.app.modules.Registrationa
-import com.munirasapplication.app.modules.registration.ui.RegistrationActivity
 import com.munirasapplication.app.modules.splashcreen.`data`.viewmodel.SplashCreenVM
 import kotlin.String
 import kotlin.Unit
@@ -49,3 +48,16 @@ class SplashCreenActivity : BaseActivity<ActivitySplashCreenBinding>(R.layout.ac
       }
     }
   }
+/*
+<TextView android:gravity="center_horizontal"
+            android:id="@+id/txtDescription"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_12pxh"
+            android:layout_marginStart="@dimen/_12pxh"
+            android:layout_marginTop="@dimen/_15pxv"
+            android:layout_width="match_parent"
+            android:lineSpacingExtra="@dimen/_10pxh"
+            android:text="@{splashCreenVM.splashCreenModel.txtDescription}"
+            style="@style/txtPoppinsregular13_1" tools:text="Click get started to start your journey with us"/>
+
+*/

@@ -76,6 +76,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth:21.1.0'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.5.2'
     implementation 'androidx.navigation:navigation-ui-ktx:2.5.2'
+
     annotationProcessor "com.github.bumptech.glide:compiler:$glideVersion"
     implementation 'com.github.mukeshsolanki:android-otpview-pinview:2.1.2'
 
@@ -85,7 +86,6 @@ dependencies {
 
     implementation("androidx.security:security-crypto:1.0.0")
     implementation "com.airbnb.android:lottie:3.4.0"
-
 
 
 }

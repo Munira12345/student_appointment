@@ -6,9 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.munirasapplication.app.R
 import com.munirasapplication.app.databinding.RowListunsplashptrhfm1Binding
-import com.munirasapplication.app.modules.patientrequests.`data`.model.Listunsplashptrhfm1RowModel
-import kotlin.Int
-import kotlin.collections.List
+import com.munirasapplication.app.modules.patientrequests.data.model.Listunsplashptrhfm1RowModel
 
 class ListunsplashptrhfmAdapter(
   var list: List<Listunsplashptrhfm1RowModel>
@@ -16,23 +14,18 @@ class ListunsplashptrhfmAdapter(
   private var clickListener: OnItemClickListener? = null
 
   override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RowListunsplashptrhfm1VH {
-    val
-        view=LayoutInflater.from(parent.context).inflate(R.layout.row_listunsplashptrhfm1,parent,false)
+    val view = LayoutInflater.from(parent.context).inflate(R.layout.row_listunsplashptrhfm1, parent, false)
     return RowListunsplashptrhfm1VH(view)
   }
 
   override fun onBindViewHolder(holder: RowListunsplashptrhfm1VH, position: Int) {
-    val listunsplashptrhfm1RowModel = Listunsplashptrhfm1RowModel()
-    // TODO uncomment following line after integration with data source
-    // val listunsplashptrhfm1RowModel = list[position]
+    val listunsplashptrhfm1RowModel = list[position]
     holder.binding.listunsplashptrhfm1RowModel = listunsplashptrhfm1RowModel
   }
 
-  override fun getItemCount(): Int = 4
-  // TODO uncomment following line after integration with data source
-  // return list.size
+  override fun getItemCount(): Int = list.size
 
-  public fun updateData(newData: List<Listunsplashptrhfm1RowModel>) {
+  fun updateData(newData: List<Listunsplashptrhfm1RowModel>) {
     list = newData
     notifyDataSetChanged()
   }
@@ -46,8 +39,7 @@ class ListunsplashptrhfmAdapter(
       view: View,
       position: Int,
       item: Listunsplashptrhfm1RowModel
-    ) {
-    }
+    )
   }
 
   inner class RowListunsplashptrhfm1VH(

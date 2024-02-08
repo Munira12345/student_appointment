@@ -9,6 +9,7 @@ data class SettingsOneModel(
    * TODO Replace with dynamic value
    */
   var txtTime: String? = MyApp.getInstance().resources.getString(R.string.lbl_10_30_pm)
+
   ,
   /**
    * TODO Replace with dynamic value

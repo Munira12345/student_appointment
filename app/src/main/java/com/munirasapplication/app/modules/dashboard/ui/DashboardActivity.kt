@@ -4,30 +4,29 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.activity.viewModels
-import androidx.core.content.ContextCompat.startActivity
+import com.google.firebase.auth.FirebaseAuth
 import com.munirasapplication.app.R
 import com.munirasapplication.app.appcomponents.base.BaseActivity
 import com.munirasapplication.app.databinding.ActivityDashboardBinding
 import com.munirasapplication.app.modules.booking.ui.BookingFragment
-import com.munirasapplication.app.modules.dashboard.`data`.viewmodel.DashboardVM
-import com.munirasapplication.app.modules.login.ui.LoginActivity
-import kotlin.String
-import kotlin.Unit
-import androidx.core.content.ContextCompat.startActivity
-import com.munirasapplication.app.modules.registration.ui.RegistrationActivity
+import com.munirasapplication.app.modules.dashboard.data.viewmodel.DashboardVM
 import com.munirasapplication.app.modules.settings.ui.SettingsActivity
 import com.munirasapplication.app.modules.studentcalendar.ui.StudentCalendarActivity
 
+
 class DashboardActivity : BaseActivity<ActivityDashboardBinding>(R.layout.activity_dashboard) {
   private val viewModel: DashboardVM by viewModels<DashboardVM>()
+
+  private lateinit var firebaseAuth: FirebaseAuth
+
 
   override fun onInitialized(): Unit {
     viewModel.navArguments = intent.extras?.getBundle("bundle")
     binding.dashboardVM = viewModel
   }
+
+
 
   override fun setUpClicks(): Unit {
     // added code
@@ -39,7 +38,7 @@ class DashboardActivity : BaseActivity<ActivityDashboardBinding>(R.layout.activi
     }
 
 
-   //all the menu Navigations
+    //all the menu Navigations
 
     // for the calendar
     val imageCalendar= binding.root.findViewById<Button>(R.id.imageCalendar)
@@ -68,6 +67,3 @@ class DashboardActivity : BaseActivity<ActivityDashboardBinding>(R.layout.activi
       return destIntent
     }
   } }
-
-
-

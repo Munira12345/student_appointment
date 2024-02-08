@@ -12,6 +12,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.munirasapplication.app.R
 import com.munirasapplication.app.modules.dashboard.ui.DashboardActivity
 
+
 class LoginA : AppCompatActivity() {
 
     private lateinit var firebaseAuth: FirebaseAuth
@@ -29,8 +30,13 @@ class LoginA : AppCompatActivity() {
     }
 }
 
-*/
+    private fun navigateToDashboard() {
+        val intent = Intent(this, DashboardActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
 
+*/
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login2)
@@ -41,10 +47,16 @@ class LoginA : AppCompatActivity() {
 
         val emailLayout: TextInputLayout = findViewById(R.id.emailLayout)
         val passwordLayout: TextInputLayout = findViewById(R.id.passwordLayout)
-        val btnLogin: Button = findViewById(R.id.btnLogin)
+        val loginButton3: Button = findViewById(R.id.loginButton3)
         val txtConfirmation = findViewById<TextView>(R.id.txtConfirmation)
 
-        btnLogin.setOnClickListener {
+        txtConfirmation.setOnClickListener {
+            val intent = Intent(this, Registrationa::class.java)
+            startActivity(intent)
+        }
+
+
+        loginButton3.setOnClickListener {
             val emailEditText: TextInputEditText = emailLayout.findViewById(R.id.btnEnterYourEmailOne)
             val passwordEditText: TextInputEditText = passwordLayout.findViewById(R.id.passET)
 
@@ -52,16 +64,30 @@ class LoginA : AppCompatActivity() {
             val password = passwordEditText.text.toString().trim()
 
             if (email.isNotEmpty() && password.isNotEmpty()) {
-                signInWithEmailAndPassword(email, password)
-            } else {
+                firebaseAuth.signInWithEmailAndPassword(email, password)
+                    .addOnCompleteListener(this) { task ->
+                        if (task.isSuccessful) {
+                            // authentication successful, navigate to Dashboard
+                            val intent = Intent(this, DashboardActivity::class.java)
+                            startActivity(intent)
+                            finish()
+                        } else {
+                            val errorMessage = task.exception?.message
+                            Toast.makeText(this, "Login not successful: $errorMessage", Toast.LENGTH_SHORT).show()
+                        }
+                    }
+            }
+
+
+
+
+
+           /* } else {
                 showToast("Empty Fields Are not Allowed !!")
             }
         }
 
-        txtConfirmation.setOnClickListener {
-            val intent = Intent(this, Registrationa::class.java)
-            startActivity(intent)
-        }
+
     }
 
       /*private fun signInWithEmailAndPassword(email: String, password: String) {
@@ -101,14 +127,14 @@ class LoginA : AppCompatActivity() {
                 }
             }
     }
-
+/*
     private fun navigateToDashboard() {
         val intent = Intent(this, DashboardActivity::class.java)
         startActivity(intent)
         finish()
     }
 
-
+*/
 
     private fun navigateToRegistration() {
 
@@ -117,4 +143,22 @@ class LoginA : AppCompatActivity() {
     private fun showToast(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
+    */
+        /*
+         <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLogin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/passwordLayout"
+        android:text="Login"
+        style="@style/btnSolid" />
+         */
+
+        }}
 }

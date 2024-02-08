@@ -32,6 +32,7 @@ class Registrationa : AppCompatActivity() {
             startActivity(intent)
         }
 
+
         registerButton.setOnClickListener {
             val emailEditText: TextInputEditText = emailLayout.findViewById(R.id.emailEditText)
             val passwordEditText: TextInputEditText = passwordLayout.findViewById(R.id.passwordEditText)
