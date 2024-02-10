@@ -76,6 +76,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth:21.1.0'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.5.2'
     implementation 'androidx.navigation:navigation-ui-ktx:2.5.2'
+    implementation 'com.google.firebase:firebase-database-ktx:20.3.0'
 
     annotationProcessor "com.github.bumptech.glide:compiler:$glideVersion"
     implementation 'com.github.mukeshsolanki:android-otpview-pinview:2.1.2'

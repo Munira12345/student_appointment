@@ -11,6 +11,8 @@ import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FirebaseAuth
 import com.munirasapplication.app.R
 import com.munirasapplication.app.modules.dashboard.ui.DashboardActivity
+import com.munirasapplication.app.modules.doctorsprofile.ui.DoctorsProfileActivity
+import com.munirasapplication.app.modules.splashcreen.ui.SplashCreenActivity
 
 
 class LoginA : AppCompatActivity() {
@@ -55,7 +57,6 @@ class LoginA : AppCompatActivity() {
             startActivity(intent)
         }
 
-
         loginButton3.setOnClickListener {
             val emailEditText: TextInputEditText = emailLayout.findViewById(R.id.btnEnterYourEmailOne)
             val passwordEditText: TextInputEditText = passwordLayout.findViewById(R.id.passET)
@@ -76,6 +77,7 @@ class LoginA : AppCompatActivity() {
                             Toast.makeText(this, "Login not successful: $errorMessage", Toast.LENGTH_SHORT).show()
                         }
                     }
+
             }
 
 

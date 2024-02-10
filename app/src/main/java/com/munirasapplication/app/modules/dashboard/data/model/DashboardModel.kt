@@ -38,5 +38,9 @@ data class DashboardModel(
    */
   var txtBookAppointmen: String? =
       MyApp.getInstance().resources.getString(R.string.msg_book_appointmen)
-
+,
+  /**
+   * New property for appointment details
+   */
+  var appointmentDetails: String? = null
 )

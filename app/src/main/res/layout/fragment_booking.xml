@@ -52,7 +52,7 @@
                 android:id="@+id/linearColumnavailabletime"
                 style="@style/groupStylegray_300cornerRadius"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="323dp"
                 android:layout_marginStart="@dimen/_34pxh"
                 android:layout_marginTop="@dimen/_18pxv"
                 android:layout_marginEnd="@dimen/_22pxh"
@@ -72,79 +72,36 @@
                     android:text="@{bookingVM.bookingModel.txtAvailabletime}"
                     tools:text="@string/msg_available_time" />
 
-                <LinearLayout
-                    android:id="@+id/linearRow800Am"
+                <Button
+                    android:id="@+id/button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_23pxh"
-                    android:layout_marginTop="@dimen/_26pxv"
-                    android:layout_marginEnd="@dimen/_23pxh"
-                    android:gravity="start"
-                    android:orientation="horizontal">
+                    android:text="8:00 AM"/>
 
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/btn800Am"
-                        style="@style/btnSolidRounded"
-                        android:layout_width="@dimen/_95pxh"
-                        android:layout_height="@dimen/_38pxv"
-                        android:ellipsize="end"
-                        android:gravity="center"
-                        android:lineSpacingExtra="@dimen/_7pxh"
-                        android:paddingStart="@dimen/_18pxh"
-                        android:paddingTop="@dimen/_9pxv"
-                        android:paddingEnd="@dimen/_26pxh"
-                        android:paddingBottom="@dimen/_9pxv"
-                        android:singleLine="true"
-                        android:text="@string/lbl_8_00_am"
-                        android:textAllCaps="false"
-                        tools:text="@string/lbl_8_00_am" />
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="10:00AM" />
 
-                    <FrameLayout
-                        android:id="@+id/frameStacktimeOne"
-                        android:layout_width="@dimen/_95pxh"
-                        android:layout_height="@dimen/_38pxv"
-                        android:layout_marginStart="@dimen/_52pxh">
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="12 NOON" />
 
-                        <TextView
-                            android:id="@+id/txtTimeOne"
-                            style="@style/txtPoppinsregular13_1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginStart="@dimen/_23pxh"
-                            android:layout_marginTop="@dimen/_8pxv"
-                            android:layout_marginEnd="@dimen/_21pxh"
-                            android:layout_marginBottom="@dimen/_9pxv"
-                            android:ellipsize="end"
-                            android:gravity="top|start"
-                            android:lineSpacingExtra="@dimen/_7pxh"
-                            android:singleLine="true"
-                            android:text="@{bookingVM.bookingModel.txtTimeOne}"
-                            tools:text="@string/lbl_9_00_am" />
+                <Button
+                    android:id="@+id/button7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1:00 PM" />
 
-                        <View
-                            android:id="@+id/viewRectangleThirteen"
-                            android:layout_width="@dimen/_95pxh"
-                            android:layout_height="@dimen/_38pxv"
-                            android:layout_gravity="start"
-                            android:background="@drawable/rectangle_bg_white_a700_a5_radius_10" />
-                    </FrameLayout>
-                </LinearLayout>
+                <Button
+                    android:id="@+id/button8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2:00 PM" />
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recyclerBooking"
-                    itemSpace="@{@dimen/_50pxh}"
-                    android:layout_width="282dp"
-                    android:layout_height="120dp"
-                    android:layout_marginStart="@dimen/_25pxh"
-                    android:layout_marginTop="@dimen/_33pxv"
-                    android:layout_marginEnd="@dimen/_25pxh"
-                    android:layout_marginBottom="@dimen/_52pxv"
-                    android:gravity="start"
-                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                    app:spanCount="2"
-                    tools:itemCount="6"
-                    tools:listitem="@layout/row_booking" />
             </LinearLayout>
 
             <ImageView android:id="@+id/imagePlus"
