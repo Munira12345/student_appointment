@@ -73,10 +73,11 @@
                     tools:text="@string/msg_available_time" />
 
                 <Button
-                    android:id="@+id/button"
+                    android:id="@+id/button12"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="8:00 AM"/>
+                    android:text="8:00 AM"
+                    tools:ignore="HardcodedText" />
 
                 <Button
                     android:id="@+id/button4"

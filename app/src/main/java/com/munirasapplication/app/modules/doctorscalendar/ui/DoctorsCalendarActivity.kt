@@ -5,7 +5,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.ImageView
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import com.munirasapplication.app.R
 import com.munirasapplication.app.appcomponents.base.BaseActivity
 import com.munirasapplication.app.databinding.ActivityDoctorsCalendarBinding
@@ -19,56 +21,22 @@ import kotlin.Int
 import kotlin.String
 import kotlin.Unit
 
-class DoctorsCalendarActivity :
-    BaseActivity<ActivityDoctorsCalendarBinding>(R.layout.activity_doctors_calendar) {
-  private val viewModel: DoctorsCalendarVM by viewModels<DoctorsCalendarVM>()
+class DoctorsCalendarActivity : AppCompatActivity() {
 
-  override fun onInitialized(): Unit {
-    viewModel.navArguments = intent.extras?.getBundle("bundle")
-    val listtextAdapter = ListtextAdapter(viewModel.listtextList.value?:mutableListOf())
-    binding.recyclerListtext.adapter = listtextAdapter
-    listtextAdapter.setOnItemClickListener(
-    object : ListtextAdapter.OnItemClickListener {
-      override fun onItemClick(view:View, position:Int, item : Listtext1RowModel) {
-        onClickRecyclerListtext(view, position, item)
-      }
-    }
-    )
-    viewModel.listtextList.observe(this) {
-      listtextAdapter.updateData(it)
-    }
-    binding.doctorsCalendarVM = viewModel
-  }
-
-  override fun setUpClicks(): Unit {
+  override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    setContentView(R.layout.activity_doctors_calendar)
 
 
-    //home page
-    val imageHome= binding.root.findViewById<Button>(R.id.imageHome)
-    imageHome.setOnClickListener{
-      // handle the button click and navigate to profile
+    val imageHome: ImageView = findViewById(R.id.imageHome)
+
+
+    imageHome.setOnClickListener {
       val intent = Intent(this, DoctorsProfileActivity::class.java)
       startActivity(intent)
     }
-    // for the settings za student
-    val imageUser= binding.root.findViewById<Button>(R.id.imageUser)
-    imageUser.setOnClickListener{
-      // handle the button click and navigate to doctor settings
-      val intent = Intent(this, SettingsOneActivity::class.java)
-      startActivity(intent)
-    }
 
   }
-
-  fun onClickRecyclerListtext(
-    view: View,
-    position: Int,
-    item: Listtext1RowModel
-  ): Unit {
-    when(view.id) {
-    }
-  }
-
   companion object {
     const val TAG: String = "DOCTORS_CALENDAR_ACTIVITY"
     fun getIntent(context: Context, bundle: Bundle?): Intent {

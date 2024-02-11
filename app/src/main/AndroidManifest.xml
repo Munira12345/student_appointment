@@ -15,13 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApp"
         android:usesCleartextTraffic="true">
-        <activity
-            android:name=".DashboardB"
-            android:exported="false" />
-        <activity
-            android:name=".modules.dashboardc"
-            android:exported="false" />
-        <activity
+               <activity
             android:name=".modules.splashcreen.ui.SplashCreenActivity"
             android:exported="true"
             android:screenOrientation="portrait">
@@ -37,22 +31,18 @@
         <activity
             android:name=".modules.doctorsprofile.ui.DoctorsProfileActivity"
             android:screenOrientation="portrait" />
+
         <activity
-            android:name=".modules.bookingcontainer.ui.BookingContainerActivity"
+            android:name=".modules.booking.ui.BookingFragment"
             android:screenOrientation="portrait" />
+
         <activity
             android:name=".modules.doctorscalendar.ui.DoctorsCalendarActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".modules.settings.ui.SettingsActivity"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".modules.studentschat.ui.StudentsChatActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".modules.dotorschat.ui.DotorsChatActivity"
-            android:screenOrientation="portrait" />
-        <activity
+                      <activity
             android:name=".modules.studentcalendar.ui.StudentCalendarActivity"
             android:screenOrientation="portrait" />
         <activity

@@ -10,24 +10,23 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import com.munirasapplication.app.R
 import com.munirasapplication.app.modules.dashboard.ui.DashboardActivity
+import android.widget.TextView
+import androidx.lifecycle.ViewModelProvider
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.ValueEventListener
+import com.munirasapplication.app.modules.booking.ui.BookingFragment
 
 class BookingFragment : AppCompatActivity() {
 
-  private lateinit var database: FirebaseDatabase
-  private lateinit var auth: FirebaseAuth
-
-
-  override fun onCreate(savedInstanceState: Bundle?) {
+   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.fragment_booking)
-
-    database = FirebaseDatabase.getInstance()
-    auth = FirebaseAuth.getInstance()
 
 
     //creating all the objects
 
-    val button: Button = findViewById(R.id.button)
+    val button12: Button = findViewById(R.id.button12)
     val button4: Button = findViewById(R.id.button4)
     val button5: Button = findViewById(R.id.button5)
     val button7: Button = findViewById(R.id.button7)
@@ -77,7 +76,7 @@ class BookingFragment : AppCompatActivity() {
 
 
 
-    button.setOnClickListener {
+    button12.setOnClickListener {
       val intent = Intent(this, DashboardActivity::class.java)
       startActivity(intent)
     }

@@ -5,49 +5,42 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModelProvider
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
 import com.munirasapplication.app.R
 import com.munirasapplication.app.modules.booking.ui.BookingFragment
-import com.munirasapplication.app.modules.dashboard.data.viewmodel.DashboardVM
 import com.munirasapplication.app.modules.settings.ui.SettingsActivity
-
 
 class DashboardActivity : AppCompatActivity() {
 
-    private lateinit var database: FirebaseDatabase
-    private lateinit var auth: FirebaseAuth
-    private lateinit var viewModel: DashboardVM
-
     override fun onCreate(savedInstanceState: Bundle?) {
-      super.onCreate(savedInstanceState)
-      setContentView(R.layout.activity_dashboard)
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_dashboard)
 
-      viewModel = ViewModelProvider(this).get(DashboardVM::class.java)
-      database = FirebaseDatabase.getInstance()
-      auth = FirebaseAuth.getInstance()
+        val button2: Button = findViewById(R.id.button2)
+        val imageUser: ImageView = findViewById(R.id.imageUser)
 
+        button2.setOnClickListener {
+            val intent = Intent(this, BookingFragment::class.java)
+            startActivity(intent)
+        }
 
-      val button2: Button = findViewById(R.id.button2)
-      val imageUser: ImageView = findViewById(R.id.imageUser)
-    //  val appointmentTextView: TextView = findViewById(R.id.txtAppointmentDetails)
-     //val appointmentDetails: TextView = findViewById(R.id.txtAppointmentDetails)
+        imageUser.setOnClickListener {
+            val intent = Intent(this, SettingsActivity::class.java)
+            startActivity(intent)
+        }
+    }
 
+    companion object {
+        const val TAG: String = "DASHBOARD_ACTIVITY"
 
-      button2.setOnClickListener {
-        val intent = Intent(this, BookingFragment::class.java)
-        startActivity(intent)
-      }
-      imageUser.setOnClickListener {
-        val intent = Intent(this, SettingsActivity::class.java)
-        startActivity(intent)
-      }
+        fun getIntent(context: Context, bundle: Bundle?): Intent {
+            val destIntent = Intent(context, DashboardActivity::class.java)
+            destIntent.putExtra("bundle", bundle)
+            return destIntent
+        }
+    }
+}
+
 /*
       val appointmentRef = database.getReference("appointments")
       val currentUser = auth.currentUser
@@ -74,20 +67,7 @@ class DashboardActivity : AppCompatActivity() {
 
 
       })
-      */
-    }
 
-    companion object {
-      const val TAG: String = "DASHBOARD_ACTIVITY"
-
-      fun getIntent(context: Context, bundle: Bundle?): Intent {
-        val destIntent = Intent(context, DashboardActivity::class.java)
-        destIntent.putExtra("bundle", bundle)
-        return destIntent
-      }
-    }
-  }
-/*
 
 *  <TextView android:ellipsize="end"
                     android:id="@+id/txtGoodmorning"

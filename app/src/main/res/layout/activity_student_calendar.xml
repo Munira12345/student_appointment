@@ -118,17 +118,6 @@
                 android:text="@string/lbl_june"
                 android:textAllCaps="false"
                 style="@style/btnSolidRounded_2" tools:text="@string/lbl_june"/>
-            <androidx.recyclerview.widget.RecyclerView
-                android:gravity="start"
-                android:id="@+id/recyclerListtext"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/_49pxh"
-                android:layout_marginStart="@dimen/_49pxh"
-                android:layout_marginTop="@dimen/_4pxv"
-                android:layout_width="match_parent"
-                android:orientation="vertical"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                itemSpace="@{@dimen/_10pxh}" tools:itemCount="7" tools:listitem="@layout/row_listtext"/>
         </LinearLayout>
         <FrameLayout android:gravity="center_horizontal"
             android:id="@+id/frameBottombar"
