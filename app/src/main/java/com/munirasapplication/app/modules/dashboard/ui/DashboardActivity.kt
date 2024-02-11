@@ -5,7 +5,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import com.munirasapplication.app.R
 import com.munirasapplication.app.modules.booking.ui.BookingFragment
 import com.munirasapplication.app.modules.settings.ui.SettingsActivity
@@ -18,6 +24,12 @@ class DashboardActivity : AppCompatActivity() {
 
         val button2: Button = findViewById(R.id.button2)
         val imageUser: ImageView = findViewById(R.id.imageUser)
+        val txtFrancisSktel: TextView = findViewById(R.id.txtFrancisSktelz)
+        val txtTimeOne: TextView = findViewById(R.id.txtTimeOne)
+
+        val currentUserEmail = FirebaseAuth.getInstance().currentUser?.email
+        val appointmentRef = FirebaseDatabase.getInstance().getReference("appointments")
+
 
         button2.setOnClickListener {
             val intent = Intent(this, BookingFragment::class.java)
@@ -28,7 +40,31 @@ class DashboardActivity : AppCompatActivity() {
             val intent = Intent(this, SettingsActivity::class.java)
             startActivity(intent)
         }
+        appointmentRef.orderByChild("email").equalTo(currentUserEmail)
+            .addListenerForSingleValueEvent(
+                object : ValueEventListener {
+                    override fun onDataChange(snapshot: DataSnapshot) {
+                        val appointments = mutableListOf<String>()
+                        for (appointmentSnapshot in snapshot.children) {
+                            val time = appointmentSnapshot.child("time").value.toString()
+                            appointments.add(time)
+                        }
+                        val latestAppointmentTime = appointments.lastOrNull()
+                        latestAppointmentTime?.let {
+                            txtTimeOne.text = it
+                        }
+                    }
+
+                    override fun onCancelled(error: DatabaseError) {
+                        // Handle the error as needed
+                    }
+                }
+            )
+        txtFrancisSktel.text = "Dr. Francis Sktelz"
     }
+
+
+
 
     companion object {
         const val TAG: String = "DASHBOARD_ACTIVITY"

@@ -75,16 +75,7 @@
                 android:layout_marginTop="@dimen/_21pxv"
                 android:layout_width="match_parent"
                 android:orientation="horizontal" style="@style/groupStylebluegray_50_a0cornerRadius">
-                <ImageView android:id="@+id/imageUnsplashpTrhfm"
-                    android:layout_height="@dimen/_70pxh"
-                    android:layout_marginBottom="@dimen/_4pxv"
-                    android:layout_marginStart="@dimen/_38pxh"
-                    android:layout_marginTop="@dimen/_9pxv"
-                    android:layout_width="@dimen/_70pxh"
-                    android:scaleType="fitXY"
-                    cornerRadius="@{@dimen/_20pxh}"
-                    imageRes="@{@drawable/img_unsplashptrhfm}"
-                    tools:ignore="ContentDescription" tools:src="@drawable/img_unsplashptrhfm"/>
+
                 <LinearLayout
                     android:id="@+id/linearColumnfrancissktelz"
                     android:layout_height="wrap_content"
