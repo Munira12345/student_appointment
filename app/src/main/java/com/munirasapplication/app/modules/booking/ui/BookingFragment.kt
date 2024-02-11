@@ -24,7 +24,7 @@ class BookingFragment : AppCompatActivity() {
     setContentView(R.layout.fragment_booking)
 
 
-    //creating all the objects
+    //creating all the objects well
 
     val button12: Button = findViewById(R.id.button12)
     val button4: Button = findViewById(R.id.button4)
