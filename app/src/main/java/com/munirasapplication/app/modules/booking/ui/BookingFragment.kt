@@ -11,6 +11,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.munirasapplication.app.R
 import com.munirasapplication.app.modules.dashboard.ui.DashboardActivity
 import android.widget.TextView
+import androidx.databinding.DataBindingUtil.setContentView
 import androidx.lifecycle.ViewModelProvider
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError

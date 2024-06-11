@@ -11,9 +11,6 @@ import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FirebaseAuth
 import com.munirasapplication.app.R
 import com.munirasapplication.app.modules.dashboard.ui.DashboardActivity
-import com.munirasapplication.app.modules.doctorsprofile.ui.DoctorsProfileActivity
-import com.munirasapplication.app.modules.splashcreen.ui.SplashCreenActivity
-
 
 class LoginA : AppCompatActivity() {
 
@@ -79,88 +76,5 @@ class LoginA : AppCompatActivity() {
                     }
 
             }
-
-
-
-
-
-           /* } else {
-                showToast("Empty Fields Are not Allowed !!")
-            }
-        }
-
-
-    }
-
-      /*private fun signInWithEmailAndPassword(email: String, password: String) {
-    firebaseAuth.signInWithEmailAndPassword(email, password)
-            .addOnCompleteListener { task ->
-                if (task.isSuccessful) {
-                    navigateToDashboard()
-                } else {
-                    val errorMessage = task.exception?.message
-                   showToast("Login Failed: $errorMessage")
-                }
-
-            }
-
-
-
-        val intent = Intent(this, DashboardActivity::class.java)
-        startActivity(intent)
-        finish()
-        showToast("Login Successful")
-}
-*/
-
-
-    private fun signInWithEmailAndPassword(email: String, password: String) {
-        firebaseAuth.signInWithEmailAndPassword(email, password)
-            .addOnCompleteListener { task ->
-                if (task.isSuccessful) {
-                    // Authentication successful, navigate to DashboardActivity
-                    val intent = Intent(this, DashboardActivity::class.java)
-                    startActivity(intent)
-                    finish()
-                    showToast("Login Successful")
-                } else {
-                    val errorMessage = task.exception?.message
-                    showToast("Login Failed: $errorMessage")
-                }
-            }
-    }
-/*
-    private fun navigateToDashboard() {
-        val intent = Intent(this, DashboardActivity::class.java)
-        startActivity(intent)
-        finish()
-    }
-
-*/
-
-    private fun navigateToRegistration() {
-
-    }
-
-    private fun showToast(message: String) {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
-    }
-    */
-        /*
-         <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnLogin"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/passwordLayout"
-        android:text="Login"
-        style="@style/btnSolid" />
-         */
-
         }}
 }

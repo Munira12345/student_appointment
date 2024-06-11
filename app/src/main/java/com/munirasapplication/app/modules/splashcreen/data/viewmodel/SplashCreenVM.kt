@@ -10,4 +10,5 @@ class SplashCreenVM : ViewModel(), KoinComponent {
   val splashCreenModel: MutableLiveData<SplashCreenModel> = MutableLiveData(SplashCreenModel())
 
   var navArguments: Bundle? = null
+  //gitcommit
 }
