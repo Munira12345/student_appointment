@@ -1,6 +1,37 @@
 
 # munira_s_application7
 
+### **Real-Time Emergency Booking for Students & Doctors**
+
+In critical moments, swift medical access can make all the difference. A real-time meeting booking system designed to bridge the gap between students and doctors. Whether it's an urgent consultation or a scheduled check-up, the platform ensures seamless scheduling and efficient communication.
+
+### **Key Features & Objectives**
+
+✅ **Instant Booking** – Students can schedule emergency medical appointments in real-time.
+
+✅ **Doctor Approvals** – Doctors can accept or reschedule appointments based on availability.
+
+✅ **Live Updates** – Booking details are instantly updated for both parties.
+
+✅ **Secure & Scalable** – Built with a robust backend to handle multiple requests efficiently.
+
+---
+
+### **Tech Stack & Implementation**
+
+🚀 **Tools & Frameworks:**
+
+- **Android Studio** – The powerhouse for UI and logic development.
+- **Firebase (Backend & Analytics)** – Real-time data sync, authentication, and insights.
+- **Realm Database** – Fast, efficient local data storage.
+- **Dependency Injection (DI)** – Streamlined and maintainable code structure.
+- **JUnit Testing** – Ensured reliability with rigorous unit tests.
+
+💻 **Languages Used:**
+
+- **Kotlin** – For a modern, concise, and safe Android experience.
+- **Java** – Legacy compatibility and performance.
+
 Built with AndroidX Support
 
 Requires Android Studio Arctic Fox | 2020.3.1 or higher.
@@ -19,16 +50,6 @@ minSdkVersion 23
 targetSdkVersion 33
 
 
-### Libraries
-
-1. Retrofit- REST API Call
-https://square.github.io/retrofit/
-2. Glide - Image Loading and caching.
-https://github.com/bumptech/glide
-3. Material Design Components - Google's latest Material Components.
-https://material.io/develop/android
-4. koin - Dependency Injection
-https://insert-koin.io/
 
 ### Figma design guideline for better accuracy
 
